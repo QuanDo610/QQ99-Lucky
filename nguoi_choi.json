@@ -1,0 +1,38 @@
+[
+  {
+    "id": "p01",
+    "ten": "Nguyễn Văn An",
+    "sdt": "0901234567",
+    "tong_cuoc_k": 168,
+    "tong_trung_k": 1960,
+    "loi_nhuan_k": 1792,
+    "ghi_chu": "Khách quen"
+  },
+  {
+    "id": "p02",
+    "ten": "Trần Thị Mai",
+    "sdt": "0988776655",
+    "tong_cuoc_k": 16,
+    "tong_trung_k": 720,
+    "loi_nhuan_k": 704,
+    "ghi_chu": "Hay đánh đầu đuôi"
+  },
+  {
+    "id": "p03",
+    "ten": "Lê Hoàng Long",
+    "sdt": "0912348899",
+    "tong_cuoc_k": 10,
+    "tong_trung_k": 3100,
+    "loi_nhuan_k": 3090,
+    "ghi_chu": "Chuyên xỉu chủ"
+  },
+  {
+    "id": "p04",
+    "ten": "Phạm Quốc Tuấn",
+    "sdt": "0977112233",
+    "tong_cuoc_k": 70,
+    "tong_trung_k": 0,
+    "loi_nhuan_k": -70,
+    "ghi_chu": "Mới chơi"
+  }
+]
