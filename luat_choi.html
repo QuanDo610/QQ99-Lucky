@@ -3,14 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Quy Định Luật Chơi & Máy Tính Tiền LOTO 3 Miền (MN, MT, MB)</title>
+  <title>Bảng Quy Định Luật Chơi & Máy Tính Tiền LOTO 3 Miền</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- KaTeX CSS & JS for LaTeX Math Rendering -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderKatexMath()"></script>
+
   <style>
     body { font-family: 'Inter', sans-serif; }
     .font-mono-num { font-family: 'JetBrains Mono', monospace; }
+
+    /* KaTeX Typography & Responsive Tuning */
+    .katex {
+      font-size: 1.02em;
+      text-rendering: auto;
+    }
+    .katex-display {
+      overflow-x: auto;
+      overflow-y: hidden;
+      padding: 0.35rem 0;
+      margin: 0.5rem 0;
+      max-width: 100%;
+      -webkit-overflow-scrolling: touch;
+    }
+    /* Đảm bảo KaTeX trong bảng và thẻ span không bị vỡ dòng ngang giữa chừng */
+    td .katex, span .katex {
+      white-space: nowrap;
+    }
+
     @media print {
       .no-print { display: none !important; }
       body { background: white !important; color: black !important; }
@@ -29,87 +54,88 @@
         <div>
           <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
             LOTO PRO - BẢO TRÂN QQ
-            <span class="text-[11px] bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full border border-emerald-500/30">Minh Chính 3 Miền</span>
+            <span class="text-[11px] bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full border border-emerald-500/30">Minh Chính</span>
           </h1>
-          <p class="text-xs text-slate-400">Luật chơi & Máy tính tiền cược chuẩn hóa cho Miền Nam, Miền Trung & Miền Bắc</p>
+          <p class="text-xs text-slate-400">Quy định luật chơi & Công cụ tính tiền cược - tiền trúng 3 Miền</p>
         </div>
       </div>
 
       <!-- Quick Links to Minh Chinh -->
       <div class="flex items-center gap-2 text-xs font-semibold no-print">
-        <span class="text-slate-400 hidden sm:inline">Tra cứu Minh Chính:</span>
+        <span class="text-slate-400 hidden sm:inline">Tra cứu kết quả:</span>
         <a href="https://www.minhchinh.com/ket-qua-xo-so-mien-nam.html" target="_blank" rel="noopener" class="px-3 py-1.5 bg-slate-800 hover:bg-emerald-600 hover:text-white rounded-lg border border-slate-700 transition flex items-center gap-1.5">
-          <span>🌴</span> MN (16h15)
+          <span>🌴</span> Miền Nam
         </a>
         <a href="https://www.minhchinh.com/ket-qua-xo-so-mien-trung.html" target="_blank" rel="noopener" class="px-3 py-1.5 bg-slate-800 hover:bg-emerald-600 hover:text-white rounded-lg border border-slate-700 transition flex items-center gap-1.5">
-          <span>🏖️</span> MT (17h15)
+          <span>🏖️</span> Miền Trung
         </a>
         <a href="https://www.minhchinh.com/ket-qua-xo-so-mien-bac.html" target="_blank" rel="noopener" class="px-3 py-1.5 bg-slate-800 hover:bg-emerald-600 hover:text-white rounded-lg border border-slate-700 transition flex items-center gap-1.5">
-          <span>🏮</span> MB (18h15)
+          <span>🏮</span> Miền Bắc
         </a>
         <button onclick="window.print()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition">
-          🖨️ In
+          🖨️ In trang
         </button>
       </div>
     </div>
   </header>
 
-  <!-- BANNER SO SÁNH 2 KHU VỰC -->
+  <!-- BANNER TÓM TẮT TỶ LỆ CHÍNH -->
   <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
       
-      <!-- Khối MN & MT -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 flex items-center gap-1.5">
-            <span>🌴</span> Miền Nam & Miền Trung (MN & MT)
-          </span>
-          <span class="text-[11px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full border border-emerald-200">18 giải / đài</span>
+      <!-- Card 1 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Bao Lô 2 Số</div>
+        <div class="text-xl font-extrabold text-emerald-600 mt-1 font-mono-num">1k = 14k/21k</div>
+        <div class="text-xs text-slate-600 mt-1 flex items-center justify-between">
+          <span>Trúng 1 nháy:</span>
+          <span class="font-bold text-orange-600 font-mono-num">$\times 72$ (72k)</span>
         </div>
-        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-          <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-            <div class="text-[11px] text-slate-500 font-semibold">Bao Lô 2 Số</div>
-            <div class="text-base font-extrabold text-emerald-600 font-mono-num mt-0.5">1k = 14k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72</div>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-            <div class="text-[11px] text-slate-500 font-semibold">Đầu Đuôi (G8 & ĐB)</div>
-            <div class="text-base font-extrabold text-emerald-600 font-mono-num mt-0.5">10k = 16k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72</div>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-            <div class="text-[11px] text-slate-500 font-semibold">Xỉu Chủ (G7 & ĐB)</div>
-            <div class="text-base font-extrabold text-emerald-600 font-mono-num mt-0.5">3 số</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x620</div>
-          </div>
-        </div>
+        <div class="text-[11px] text-slate-400 mt-0.5">Dò 2 số cuối 18/27 lô</div>
       </div>
 
-      <!-- Khối Miền Bắc (MB) -->
-      <div class="bg-white p-5 rounded-2xl border-2 border-indigo-200 shadow-sm relative overflow-hidden bg-gradient-to-br from-white to-indigo-50/30">
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 flex items-center gap-1.5">
-            <span>🏮</span> Miền Bắc (MB) - Chỉ 1 đài duy nhất
-          </span>
-          <span class="text-[11px] bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full border border-indigo-300">27 giải (Không có G8)</span>
+      <!-- Card 2 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Bao Lô 3 Số</div>
+        <div class="text-xl font-extrabold text-emerald-600 mt-1 font-mono-num">1k = 14k/21k</div>
+        <div class="text-xs text-slate-600 mt-1 flex items-center justify-between">
+          <span>Trúng 1 nháy:</span>
+          <span class="font-bold text-orange-600 font-mono-num">$\times 620$ (620k)</span>
         </div>
-        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-          <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-xs">
-            <div class="text-[11px] text-slate-500 font-semibold">Bao Lô MB</div>
-            <div class="text-base font-extrabold text-indigo-700 font-mono-num mt-0.5">1k = 21k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72 | x620</div>
-          </div>
-          <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-xs">
-            <div class="text-[11px] text-slate-500 font-semibold">Đầu Đuôi MB (4 số G7 + ĐB)</div>
-            <div class="text-base font-extrabold text-indigo-700 font-mono-num mt-0.5">1k = 4k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72 / vị trí</div>
-          </div>
-          <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-xs">
-            <div class="text-[11px] text-slate-500 font-semibold">Xỉu Chủ MB (3 số G6 + ĐB)</div>
-            <div class="text-base font-extrabold text-indigo-700 font-mono-num mt-0.5">10k = 32k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x620</div>
-          </div>
+        <div class="text-[11px] text-slate-400 mt-0.5">Dò 3 số cuối (G7/G6 $\rightarrow$ ĐB)</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-slate-400">Bao Lô 4 Số</div>
+        <div class="text-xl font-extrabold text-emerald-600 mt-1 font-mono-num">1k = 14k/21k</div>
+        <div class="text-xs text-slate-600 mt-1 flex items-center justify-between">
+          <span>Trúng 1 nháy:</span>
+          <span class="font-bold text-orange-600 font-mono-num">$\times 5200$</span>
         </div>
+        <div class="text-[11px] text-slate-400 mt-0.5">1k ăn 5.200k (5.2tr)</div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden ring-2 ring-emerald-500/20">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Đầu Đuôi (2 Số)</div>
+        <div class="text-xl font-extrabold text-emerald-600 mt-1 font-mono-num">10k = 16k/40k</div>
+        <div class="text-xs text-slate-600 mt-1 flex items-center justify-between">
+          <span>Trúng 1 nháy:</span>
+          <span class="font-bold text-orange-600 font-mono-num">$\times 72$ (720k)</span>
+        </div>
+        <div class="text-[11px] text-emerald-600 mt-0.5 font-medium">Dò G8/G7 & Giải ĐB</div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="col-span-2 sm:col-span-1 bg-white p-4 rounded-xl border border-slate-200 shadow-sm relative overflow-hidden ring-2 ring-emerald-500/20">
+        <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Xỉu Chủ (3 Số)</div>
+        <div class="text-xl font-extrabold text-emerald-600 mt-1 font-mono-num">Buộc 3 số</div>
+        <div class="text-xs text-slate-600 mt-1 flex items-center justify-between">
+          <span>Trúng 1 nháy:</span>
+          <span class="font-bold text-orange-600 font-mono-num">$\times 620$ (620k)</span>
+        </div>
+        <div class="text-[11px] text-emerald-600 mt-0.5 font-medium">Dò G7/G6 & Giải ĐB</div>
       </div>
 
     </div>
@@ -118,53 +144,52 @@
   <!-- MAIN TWO-COLUMN LAYOUT -->
   <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-    <!-- CỘT TRÁI (5 CỘT): MÁY TÍNH TIỀN THÔNG MINH -->
+    <!-- CỘT TRÁI (5 CỘT): MÁY TÍNH TOÁN TIỀN ĐẶT & TIỀN TRÚNG -->
     <div class="lg:col-span-5 space-y-6">
 
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden sticky top-20">
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden lg:sticky lg:top-20">
         <!-- Card Header -->
-        <div class="bg-gradient-to-r from-slate-900 to-slate-800 p-5 text-white">
+        <div class="bg-gradient-to-r from-emerald-600 to-teal-700 p-5 text-white">
           <div class="flex items-center justify-between">
             <h2 class="text-lg font-bold flex items-center gap-2">
               <span>🧮</span> Máy Tính Tiền Cược & Trúng
             </h2>
-            <span id="regionBadge" class="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2.5 py-0.5 rounded-full border border-emerald-500/30">Miền Nam / Trung</span>
+            <span class="text-xs bg-white/20 text-white font-semibold px-2.5 py-0.5 rounded-full backdrop-blur-sm">Tự động</span>
           </div>
-          <p class="text-slate-300 text-xs mt-1">Chuyển miền để tự động áp dụng công thức xác và vị trí dò tương ứng</p>
+          <p class="text-emerald-100 text-xs mt-1">Nhập số con, số đài và tiền đánh để xem chi tiết tiền xác & thưởng</p>
         </div>
 
         <div class="p-6 space-y-4">
-          
-          <!-- 1. Chọn Miền -->
+          <!-- 0. Chọn Khu Vực -->
           <div>
             <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-              1. Chọn khu vực (Miền)
+              Chọn khu vực đài
             </label>
             <div class="grid grid-cols-2 gap-2">
-              <button type="button" id="btnMNMT" onclick="setRegion('MN')" class="py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-emerald-600 text-white border-emerald-600 shadow-sm">
-                <span>🌴</span> Miền Nam & Trung
+              <button type="button" id="regionBtnMN" onclick="selectRegion('MN')" class="py-2 px-3 text-xs font-bold rounded-xl border transition flex items-center justify-center gap-1.5 bg-emerald-50 text-emerald-800 border-emerald-300 ring-2 ring-emerald-500/20">
+                <span>🌴</span> MN & MT (18 Lô)
               </button>
-              <button type="button" id="btnMB" onclick="setRegion('MB')" class="py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100">
-                <span>🏮</span> Miền Bắc (MB)
+              <button type="button" id="regionBtnMB" onclick="selectRegion('MB')" class="py-2 px-3 text-xs font-bold rounded-xl border transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100">
+                <span>🏮</span> Miền Bắc (27 Lô)
               </button>
             </div>
           </div>
 
-          <!-- 2. Loại cược -->
+          <!-- 1. Loại cược -->
           <div>
             <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-              2. Chọn loại cược
+              1. Chọn loại cược
             </label>
             <select id="betType" onchange="onBetTypeChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
-              <!-- Render động theo miền -->
+              <!-- Được cập nhật tự động bằng JS theo Miền -->
             </select>
           </div>
 
-          <!-- 3. Danh sách số đánh -->
+          <!-- 2. Danh sách số đánh -->
           <div>
             <div class="flex justify-between items-center mb-1.5">
               <label class="text-xs font-bold text-slate-600 uppercase tracking-wider">
-                3. Nhập số đánh <span id="digitsBadge" class="text-[11px] lowercase font-normal text-slate-400">(mỗi số 2 chữ số)</span>
+                2. Nhập số đánh <span id="digitsBadge" class="text-[11px] lowercase font-normal text-slate-400">(mỗi số 2 chữ số)</span>
               </label>
               <span id="numbersCountBadge" class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">1 con</span>
             </div>
@@ -172,11 +197,11 @@
             <div id="numberTags" class="flex flex-wrap gap-1.5 mt-1.5"></div>
           </div>
 
-          <!-- 4. Số đài & Số nháy trúng -->
+          <!-- 3. Số đài & Khu vực -->
           <div class="grid grid-cols-2 gap-3">
-            <div id="provinceWrapper">
+            <div>
               <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-                4. Số lượng đài
+                3. Số lượng đài
               </label>
               <select id="provincesCount" onchange="calculate()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                 <option value="1">1 Đài</option>
@@ -186,33 +211,25 @@
               </select>
             </div>
 
-            <div id="mbProvinceNote" class="hidden">
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-                Đài quay thưởng
-              </label>
-              <div class="w-full bg-slate-100 border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold text-slate-700">
-                1 Đài Miền Bắc
-              </div>
-            </div>
-
             <div>
               <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
                 Số nháy trúng giả định
               </label>
-              <select id="hitMatches" onchange="calculate()" class="w-full bg-slate-50 border border-orange-200 rounded-xl px-3 py-2 text-sm font-semibold text-orange-700 bg-orange-50/50 focus:ring-2 focus:ring-orange-500 focus:outline-none">
+              <select id="hitMatches" onchange="calculate()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold text-orange-700 bg-orange-50/50 border-orange-200 focus:ring-2 focus:ring-orange-500 focus:outline-none">
                 <option value="1">Trúng 1 nháy (mặc định)</option>
                 <option value="2">Trúng 2 nháy</option>
                 <option value="3">Trúng 3 nháy</option>
                 <option value="4">Trúng 4 nháy</option>
+                <option value="5">Trúng 5 nháy</option>
               </select>
             </div>
           </div>
 
-          <!-- 5. Tiền / Điểm cược -->
+          <!-- 4. Tiền / Điểm cược -->
           <div>
             <div class="flex justify-between items-center mb-1.5">
               <label class="text-xs font-bold text-slate-600 uppercase tracking-wider" id="amountLabel">
-                5. Tiền cược cho mỗi con (k)
+                4. Tiền cược cho mỗi con (k)
               </label>
               <span class="text-xs text-slate-400">1k = 1.000 đ</span>
             </div>
@@ -228,6 +245,7 @@
               <button type="button" onclick="setBetAmount(10)" class="px-2.5 py-1 text-xs bg-emerald-100 hover:bg-emerald-200 rounded-lg font-bold text-emerald-800 border border-emerald-300 transition">10k</button>
               <button type="button" onclick="setBetAmount(20)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">20k</button>
               <button type="button" onclick="setBetAmount(50)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">50k</button>
+              <button type="button" onclick="setBetAmount(100)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">100k</button>
             </div>
           </div>
 
@@ -235,12 +253,12 @@
           <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-5 shadow-lg border border-slate-700 space-y-3.5 mt-2">
             
             <!-- Tiền xác -->
-            <div class="flex justify-between items-baseline">
-              <div>
-                <div class="text-xs uppercase font-bold text-slate-400">Tiền Xác Phải Thu (Vốn)</div>
-                <div class="text-[11px] text-emerald-400 font-mono mt-0.5" id="costFormulaDetail">1 số × 1 đài × 10k × 14 = 140k</div>
+            <div class="flex justify-between items-baseline gap-2">
+              <div class="min-w-0">
+                <div class="text-xs uppercase font-bold text-slate-400">Tiền Xác Phải Thu (Tổng vốn)</div>
+                <div class="text-[11px] text-emerald-400/90 font-mono mt-0.5 truncate" id="costFormulaDetail">1 số × 1 đài × 10k × 14 = 140k</div>
               </div>
-              <div class="text-2xl font-black text-emerald-400 font-mono-num text-right" id="totalCostDisplay">
+              <div class="text-xl sm:text-2xl font-black text-emerald-400 font-mono-num text-right shrink-0" id="totalCostDisplay">
                 140.000 đ
               </div>
             </div>
@@ -248,12 +266,12 @@
             <div class="border-t border-slate-700/80"></div>
 
             <!-- Tiền trúng -->
-            <div class="flex justify-between items-baseline">
-              <div>
+            <div class="flex justify-between items-baseline gap-2">
+              <div class="min-w-0">
                 <div class="text-xs uppercase font-bold text-slate-400">Tiền Thưởng Nhận Về</div>
-                <div class="text-[11px] text-orange-400 font-mono mt-0.5" id="winFormulaDetail">1 nháy × 10k × 72 = 720k</div>
+                <div class="text-[11px] text-orange-400/90 font-mono mt-0.5 truncate" id="winFormulaDetail">1 nháy × 10k × 72 = 720k</div>
               </div>
-              <div class="text-2xl font-black text-orange-400 font-mono-num text-right" id="totalWinDisplay">
+              <div class="text-xl sm:text-2xl font-black text-orange-400 font-mono-num text-right shrink-0" id="totalWinDisplay">
                 720.000 đ
               </div>
             </div>
@@ -263,7 +281,7 @@
             <!-- Lợi nhuận ròng -->
             <div class="flex justify-between items-center bg-slate-800/80 p-3 rounded-xl border border-slate-700">
               <span class="text-xs font-bold text-slate-300 uppercase">Khách Lời Ròng:</span>
-              <span class="text-lg font-extrabold text-white font-mono-num" id="netProfitDisplay">
+              <span class="text-base sm:text-lg font-extrabold text-white font-mono-num" id="netProfitDisplay">
                 +580.000 đ
               </span>
             </div>
@@ -284,84 +302,27 @@
 
     </div>
 
-    <!-- CỘT PHẢI (7 CỘT): TOÀN BỘ LUẬT CHƠI CHI TIẾT THEO TỪNG MIỀN -->
+    <!-- CỘT PHẢI (7 CỘT): TOÀN BỘ LUẬT CHƠI CHI TIẾT & TRA CỨU -->
     <div class="lg:col-span-7 space-y-6">
 
-      <!-- PHẦN A: BẢNG LUẬT MIỀN BẮC -->
-      <div class="bg-white rounded-2xl shadow-sm border-2 border-indigo-200 p-6">
-        <div class="flex items-center justify-between pb-4 border-b border-indigo-100">
-          <div>
-            <h2 class="text-lg font-bold text-indigo-950 flex items-center gap-2">
-              <span>🏮</span> Quy Định Riêng: Xổ Số Miền Bắc (MB)
-            </h2>
-            <p class="text-xs text-indigo-700 mt-0.5">Chỉ có 1 đài mở thưởng (27 lô) - <strong>Không có Giải 8</strong></p>
-          </div>
-          <span class="text-xs bg-indigo-100 text-indigo-900 font-bold px-2.5 py-1 rounded-lg">Đặc thù MB</span>
-        </div>
-
-        <div class="overflow-x-auto mt-4">
-          <table class="w-full text-left text-sm">
-            <thead>
-              <tr class="bg-indigo-50/60 text-indigo-950 text-xs uppercase font-bold border-y border-indigo-200">
-                <th class="py-3 px-3">Loại cược MB</th>
-                <th class="py-3 px-3">Phạm vi dò số</th>
-                <th class="py-3 px-3">Tiền xác MB</th>
-                <th class="py-3 px-3">Tiền trúng (1 nháy)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-indigo-50/30 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 2 Số MB</td>
-                <td class="py-3 px-3 text-xs text-slate-600">2 số cuối của tất cả 27 giải</td>
-                <td class="py-3 px-3 font-extrabold text-indigo-700 font-mono-num">1k $\rightarrow$ 21k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ (72k)</td>
-              </tr>
-              <tr class="hover:bg-indigo-50/30 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 3 Số MB</td>
-                <td class="py-3 px-3 text-xs text-slate-600">3 số cuối các giải có $\ge$ 3 chữ số</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 21k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ (620k)</td>
-              </tr>
-              <tr class="hover:bg-indigo-50/30 transition bg-indigo-50/10">
-                <td class="py-3 px-3 font-bold text-indigo-900">Đầu Đuôi MB (2 số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-indigo-800">
-                  • Đầu: <strong>4 số của Giải 7</strong><br>
-                  • Đuôi: <strong>2 số cuối Giải ĐB</strong> *(Tổng 5 vị trí)*
-                </td>
-                <td class="py-3 px-3 font-extrabold text-indigo-700 font-mono-num">1k cược $\rightarrow$ 4k xác<br><span class="text-[11px] font-normal text-slate-500">(10k = 40k)</span></td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ / vị trí<br><span class="text-[11px] font-normal text-slate-500">(10k ăn 720k)</span></td>
-              </tr>
-              <tr class="hover:bg-indigo-50/30 transition bg-indigo-50/10">
-                <td class="py-3 px-3 font-bold text-indigo-900">Xỉu Chủ MB (3 số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-indigo-800">
-                  • Đầu: <strong>3 số của Giải 6</strong><br>
-                  • Đuôi: <strong>3 số cuối Giải ĐB</strong> *(Tổng 4 vị trí)*
-                </td>
-                <td class="py-3 px-3 font-extrabold text-indigo-700 font-mono-num">10k cược $\rightarrow$ 32k xác<br><span class="text-[11px] font-normal text-slate-500">(Hệ số 3.2)</span></td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ / vị trí<br><span class="text-[11px] font-normal text-slate-500">(10k ăn 6.200k)</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- PHẦN B: BẢNG LUẬT MIỀN NAM & MIỀN TRUNG -->
+      <!-- BẢNG TỔNG QUAN TỶ LỆ LUẬT CHƠI -->
       <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
         <div class="flex items-center justify-between pb-4 border-b border-slate-100">
           <div>
             <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span>🌴</span> Quy Định: Xổ Số Miền Nam & Miền Trung (MN & MT)
+              <span>📜</span> Bảng Quy Định Tỷ Lệ Cược & Trả Thưởng
             </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Mỗi đài có 18 giải (Có Giải 8 và Giải Đặc Biệt 6 số)</p>
+            <p class="text-xs text-slate-500 mt-0.5">Áp dụng cho khách đánh tại công ty đối chiếu theo Xổ Số Minh Chính</p>
           </div>
-          <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-lg">Chuẩn 18 lô</span>
+          <span class="text-xs bg-slate-100 text-slate-700 font-semibold px-2.5 py-1 rounded-lg">Cập nhật 2026</span>
         </div>
 
         <div class="overflow-x-auto mt-4">
-          <table class="w-full text-left text-sm">
+          <table class="w-full text-left text-sm min-w-[560px]">
             <thead>
               <tr class="bg-slate-50 text-slate-600 text-xs uppercase font-bold border-y border-slate-200">
                 <th class="py-3 px-3">Loại cược</th>
+                <th class="py-3 px-3">Số con</th>
                 <th class="py-3 px-3">Phạm vi dò số</th>
                 <th class="py-3 px-3">Tiền xác (1 đài)</th>
                 <th class="py-3 px-3">Tiền trúng (1 nháy)</th>
@@ -370,102 +331,340 @@
             <tbody class="divide-y divide-slate-100">
               <tr class="hover:bg-slate-50/80 transition">
                 <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 2 Số</td>
-                <td class="py-3 px-3 text-xs text-slate-600">2 số cuối tất cả 18 giải</td>
-                <td class="py-3 px-3 font-bold text-emerald-700 font-mono-num">1k $\rightarrow$ 14k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ (72k)</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 bg-slate-100 rounded text-xs font-mono">2 số</span></td>
+                <td class="py-3 px-3 text-xs text-slate-600">2 số cuối 18 giải (MN/MT) hoặc 27 giải (MB)</td>
+                <td class="py-3 px-3 font-bold text-emerald-700 font-mono-num whitespace-nowrap">1k $\rightarrow$ 14k</td>
+                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 72$ (72k)</td>
               </tr>
               <tr class="hover:bg-slate-50/80 transition">
                 <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 3 Số</td>
-                <td class="py-3 px-3 text-xs text-slate-600">3 số cuối từ Giải 7 $\rightarrow$ Đặc Biệt</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 14k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ (620k)</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 bg-slate-100 rounded text-xs font-mono">3 số</span></td>
+                <td class="py-3 px-3 text-xs text-slate-600">3 số cuối các giải có $\ge$ 3 chữ số (từ G7 đến ĐB)</td>
+                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num whitespace-nowrap">1k $\rightarrow$ 14k</td>
+                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 620$ (620k)</td>
               </tr>
               <tr class="hover:bg-slate-50/80 transition">
                 <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 4 Số</td>
-                <td class="py-3 px-3 text-xs text-slate-600">4 số cuối từ Giải 6 $\rightarrow$ Đặc Biệt</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 14k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 5200$ (5.200k)</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 bg-slate-100 rounded text-xs font-mono">4 số</span></td>
+                <td class="py-3 px-3 text-xs text-slate-600">4 số cuối các giải có $\ge$ 4 chữ số (từ G6 đến ĐB)</td>
+                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num whitespace-nowrap">1k $\rightarrow$ 14k</td>
+                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 5200$ (5.200k)</td>
               </tr>
-              <tr class="hover:bg-emerald-50/30 transition">
+              <tr class="hover:bg-emerald-50/40 transition bg-emerald-50/20">
                 <td class="py-3 px-3 font-bold text-emerald-900">Đầu Đuôi (2 Số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-emerald-800">Giải 8 (Đầu) & Giải ĐB (Đuôi)</td>
-                <td class="py-3 px-3 font-bold text-emerald-700 font-mono-num">10k $\rightarrow$ 16k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ (720k)</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-xs font-mono font-bold">2 số</span></td>
+                <td class="py-3 px-3 text-xs font-semibold text-emerald-800">Chỉ dò Giải 8 (Đầu) và Giải ĐB (Đuôi)</td>
+                <td class="py-3 px-3 font-bold text-emerald-700 font-mono-num whitespace-nowrap">10k $\rightarrow$ 16k</td>
+                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 72$ (720k)</td>
               </tr>
-              <tr class="hover:bg-emerald-50/30 transition">
+              <tr class="hover:bg-emerald-50/40 transition bg-emerald-50/20">
                 <td class="py-3 px-3 font-bold text-emerald-900">Xỉu Chủ (3 Số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-emerald-800">Giải 7 (Đầu) & Giải ĐB (Đuôi)</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 2k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ (620k)</td>
+                <td class="py-3 px-3"><span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded text-xs font-mono font-bold">3 số</span></td>
+                <td class="py-3 px-3 text-xs font-semibold text-emerald-800">Chỉ dò Giải 7 (Đầu) và Giải ĐB (Đuôi)</td>
+                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num whitespace-nowrap">1k $\rightarrow$ 2k (2 giải)</td>
+                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 620$ (620k)</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
+      <!-- BẢNG SO SÁNH TRỰC QUAN MN/MT VÀ MB -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
+        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span>⚖️</span> So Sánh Luật Cược: Miền Nam/Trung vs Miền Bắc
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">Phân biệt sự khác nhau về cơ cấu lô, tỷ lệ xác và vị trí dò thưởng</p>
+          </div>
+          <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-2.5 py-1 rounded-lg border border-indigo-200">Chuẩn Minh Chính</span>
+        </div>
+
+        <div class="overflow-x-auto mt-4">
+          <table class="w-full text-left text-xs sm:text-sm min-w-[560px]">
+            <thead>
+              <tr class="bg-slate-50 text-slate-600 text-xs uppercase font-bold border-y border-slate-200">
+                <th class="py-3 px-3">Hạng mục</th>
+                <th class="py-3 px-3 text-emerald-800">Miền Nam & Trung (MN & MT)</th>
+                <th class="py-3 px-3 text-indigo-800">Miền Bắc (MB)</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-100">
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Số đài mở thưởng</td>
+                <td class="py-2.5 px-3 font-medium text-slate-800">2 - 4 đài / ngày</td>
+                <td class="py-2.5 px-3 font-bold text-indigo-700">Chỉ 1 đài / ngày</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Tổng số giải (lô)</td>
+                <td class="py-2.5 px-3 font-medium text-slate-800">18 lô / đài (có G8)</td>
+                <td class="py-2.5 px-3 font-bold text-indigo-700">27 lô / đài (không có G8)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Xác Bao Lô</td>
+                <td class="py-2.5 px-3 font-bold text-emerald-700 font-mono-num whitespace-nowrap">1k điểm = 14k xác</td>
+                <td class="py-2.5 px-3 font-bold text-rose-700 font-mono-num whitespace-nowrap">1k điểm = 21k xác</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Ăn Bao Lô 2 số</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 72$ ($1\text{k} \rightarrow 72\text{k}$)</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 72$ ($1\text{k} \rightarrow 72\text{k}$)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Ăn Bao Lô 3 số</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 620$ ($1\text{k} \rightarrow 620\text{k}$)</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 620$ ($1\text{k} \rightarrow 620\text{k}$)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Đầu Đuôi - Vị trí dò</td>
+                <td class="py-2.5 px-3 text-xs text-slate-700">Giải 8 (Đầu) & Giải ĐB (Đuôi) <span class="font-bold text-emerald-700">(2 vị trí)</span></td>
+                <td class="py-2.5 px-3 text-xs text-indigo-900 font-medium">4 số G7 (Đầu) & Giải ĐB (Đuôi) <span class="font-bold text-indigo-700">(5 vị trí)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Đầu Đuôi - Tiền xác</td>
+                <td class="py-2.5 px-3 font-bold text-emerald-700 font-mono-num whitespace-nowrap">10k cược $\rightarrow$ Xác 16k</td>
+                <td class="py-2.5 px-3 font-bold text-indigo-700 font-mono-num whitespace-nowrap">1k cược $\rightarrow$ Xác 4k (10k = 40k)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Đầu Đuôi - Tiền trúng</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 72$ ($10\text{k} \rightarrow 720\text{k}$)</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 72$ ($10\text{k} \rightarrow 720\text{k}$)</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Xỉu Chủ - Vị trí dò</td>
+                <td class="py-2.5 px-3 text-xs text-slate-700">Giải 7 (Đầu) & Giải ĐB (Đuôi) <span class="font-bold text-emerald-700">(2 vị trí)</span></td>
+                <td class="py-2.5 px-3 text-xs text-indigo-900 font-medium">3 số G6 (Đầu) & Giải ĐB (Đuôi) <span class="font-bold text-indigo-700">(4 vị trí)</span></td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Xỉu Chủ - Tiền xác</td>
+                <td class="py-2.5 px-3 font-medium text-slate-600 font-mono-num whitespace-nowrap">1k cược $\rightarrow$ Xác 2k</td>
+                <td class="py-2.5 px-3 font-bold text-indigo-700 font-mono-num whitespace-nowrap">10k cược $\rightarrow$ Xác 32k</td>
+              </tr>
+              <tr class="hover:bg-slate-50/80 transition">
+                <td class="py-2.5 px-3 font-semibold text-slate-700">Xỉu Chủ - Tiền trúng</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 620$ ($1\text{k} \rightarrow 620\text{k}$)</td>
+                <td class="py-2.5 px-3 font-extrabold text-orange-600 font-mono-num whitespace-nowrap">$\times 620$ ($10\text{k} \rightarrow 6.200\text{k}$)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- CÁC VÍ DỤ TÍNH TIỀN THỰC TẾ (CÔNG THỨC TOÁN) -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-4">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+          <div>
+            <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+              <span>💡</span> Ví Dụ Tính Tiền Thực Tế
+            </h3>
+            <p class="text-xs text-slate-500 mt-0.5">Minh họa cách tính tiền xác, tiền trúng và lời ròng bằng công thức toán</p>
+          </div>
+          <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-2.5 py-1 rounded-lg border border-emerald-200">Công Thức Chuẩn</span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          <!-- Ví dụ 1 -->
+          <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-2">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-emerald-600 text-white flex items-center justify-center text-[10px]">1</span>
+              Bao Lô Miền Bắc (MB)
+            </div>
+            <div class="text-xs text-slate-600 space-y-1.5">
+              <div>• Cược: Số <code class="bg-white px-1 py-0.5 rounded border border-slate-200 font-bold">66</code>, điểm <span class="font-bold">10k</span></div>
+              <div>• Tiền xác: <span class="text-emerald-700 font-bold font-mono">$10\text{k} \times 21 = 210\text{k}$</span></div>
+              <div>• Về 2 nháy: <span class="text-orange-600 font-bold font-mono">$2 \times 10\text{k} \times 72 = 1.440\text{k}$</span></div>
+              <div class="pt-1.5 border-t border-slate-200 text-slate-800 font-semibold">
+                Lời ròng: <span class="text-emerald-600 font-bold font-mono">$1.440\text{k} - 210\text{k} = +1.230\text{k}$</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ví dụ 2 -->
+          <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-2">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-teal-600 text-white flex items-center justify-center text-[10px]">2</span>
+              Đầu Đuôi Miền Bắc (5 vị trí)
+            </div>
+            <div class="text-xs text-slate-600 space-y-1.5">
+              <div>• Cược: Số <code class="bg-white px-1 py-0.5 rounded border border-slate-200 font-bold">45</code>, tiền <span class="font-bold">10k</span></div>
+              <div>• Tiền xác: <span class="text-emerald-700 font-bold font-mono">$\frac{10\text{k}}{1\text{k}} \times 4\text{k} = 40\text{k}$</span></div>
+              <div>• Trúng 1 nháy: <span class="text-orange-600 font-bold font-mono">$10\text{k} \times 72 = 720\text{k}$</span></div>
+              <div class="pt-1.5 border-t border-slate-200 text-slate-800 font-semibold">
+                Lời ròng: <span class="text-emerald-600 font-bold font-mono">$720\text{k} - 40\text{k} = +680\text{k}$</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ví dụ 3 -->
+          <div class="bg-slate-50 rounded-xl p-3.5 border border-slate-200 space-y-2">
+            <div class="text-xs font-bold text-slate-900 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-amber-600 text-white flex items-center justify-center text-[10px]">3</span>
+              Xỉu Chủ Miền Bắc (4 vị trí)
+            </div>
+            <div class="text-xs text-slate-600 space-y-1.5">
+              <div>• Cược: Số <code class="bg-white px-1 py-0.5 rounded border border-slate-200 font-bold">416</code>, tiền <span class="font-bold">10k</span></div>
+              <div>• Tiền xác: <span class="text-emerald-700 font-bold font-mono">$32\text{k}$</span> (10k xác 32k)</div>
+              <div>• Trúng 1 nháy: <span class="text-orange-600 font-bold font-mono">$10\text{k} \times 620 = 6.200\text{k}$</span></div>
+              <div class="pt-1.5 border-t border-slate-200 text-slate-800 font-semibold">
+                Lời ròng: <span class="text-emerald-600 font-bold font-mono">$6.200\text{k} - 32\text{k} = +6.168\text{k}$</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CHI TIẾT TỪNG LOẠI CƯỢC -->
+      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6 space-y-6">
+        <h3 class="text-base font-bold text-slate-900 flex items-center gap-2">
+          <span>🔍</span> Hướng Dẫn Chi Tiết Cách Dò & Tính Tiền
+        </h3>
+
+        <!-- Mục 1: Bao Lô -->
+        <div class="border-l-4 border-emerald-500 pl-4 space-y-1.5">
+          <h4 class="font-bold text-slate-900 text-sm">1. Đánh Bao Lô (2 con, 3 con, 4 con)</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Bao Lô 2 con</strong>: Người chơi chọn số có 2 chữ số (từ <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">00</code> đến <code class="bg-slate-100 px-1 py-0.5 rounded text-slate-800">99</code>). Hệ thống dò ở 2 số cuối của tất cả các giải trong đài. Đánh 1k điểm trả tiền xác là <strong>14k</strong> (MN/MT) hoặc <strong>21k</strong> (MB). Về 1 nháy trúng <strong>72k</strong>, về 2 nháy trúng <strong>144k</strong>, về $N$ nháy nhân bấy nhiêu lần.
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Bao Lô 3 con</strong>: Dò ở 3 số cuối của tất cả các giải có từ 3 chữ số trở lên. Trúng 1 nháy nhân <strong>620</strong> (1k ăn 620k).
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Bao Lô 4 con</strong>: Dò ở 4 số cuối của các giải có từ 4 chữ số trở lên. Trúng 1 nháy nhân <strong>5200</strong> (1k ăn 5.200k tức 5,2 triệu đồng).
+          </p>
+        </div>
+
+        <!-- Mục 2: Đầu Đuôi -->
+        <div class="border-l-4 border-teal-500 pl-4 space-y-1.5">
+          <h4 class="font-bold text-slate-900 text-sm">2. Đánh Đầu Đuôi (Bắt buộc 2 số)</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Miền Nam & Trung</strong>: Dò đúng 2 vị trí: <strong>Giải 8 (Đầu)</strong> và <strong>2 số cuối Giải Đặc Biệt (Đuôi)</strong>. Cược 10k $\rightarrow$ Xác 16k/đài. Trúng mỗi vị trí ăn $\times 72$ (10k ăn 720k). Về cả 2 vị trí ăn 2 nháy ($720\text{k} \times 2 = 1.440\text{k}$).
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Miền Bắc</strong>: Dò 5 vị trí: <strong>4 số của Giải 7 (Đầu)</strong> và <strong>Giải Đặc Biệt (Đuôi)</strong>. Cược 1k $\rightarrow$ Xác 4k (10k cược $\rightarrow$ Xác 40k). Trúng mỗi vị trí ăn $\times 72$ (10k ăn 720k).
+          </p>
+        </div>
+
+        <!-- Mục 3: Xỉu Chủ -->
+        <div class="border-l-4 border-amber-500 pl-4 space-y-1.5">
+          <h4 class="font-bold text-slate-900 text-sm">3. Đánh Xỉu Chủ (Bắt buộc 3 số)</h4>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Miền Nam & Trung</strong>: Dò 2 vị trí: <strong>Giải 7 (3 chữ số)</strong> và <strong>3 số cuối Giải Đặc Biệt</strong>. Tiền xác 1k cược ăn $\times 620$ (1k ăn 620k, 10k ăn 6.200k).
+          </p>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            - <strong>Miền Bắc</strong>: Dò 4 vị trí: <strong>3 số của Giải 6 (3 lần quay)</strong> và <strong>3 số cuối Giải Đặc Biệt</strong>. Cược 10k $\rightarrow$ Xác 32k. Trúng mỗi vị trí ăn $\times 620$ (10k ăn 6.200k).
+          </p>
+        </div>
+
+        <!-- Lịch quay 3 miền -->
+        <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+          <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
+            <span>⏰</span> Lịch Mở Thưởng Xổ Số 3 Miền Chuẩn Minh Chính
+          </h4>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 text-xs">
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+              <div class="font-bold text-emerald-800">Miền Nam (MN)</div>
+              <div class="text-slate-500 mt-0.5">Quay lúc: <strong class="text-slate-800">16h15</strong></div>
+              <div class="text-slate-500">Gồm 18 giải (lô) / đài</div>
+            </div>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+              <div class="font-bold text-emerald-800">Miền Trung (MT)</div>
+              <div class="text-slate-500 mt-0.5">Quay lúc: <strong class="text-slate-800">17h15</strong></div>
+              <div class="text-slate-500">Gồm 18 giải (lô) / đài</div>
+            </div>
+            <div class="bg-white p-2.5 rounded-lg border border-slate-200">
+              <div class="font-bold text-emerald-800">Miền Bắc (MB)</div>
+              <div class="text-slate-500 mt-0.5">Quay lúc: <strong class="text-slate-800">18h15</strong></div>
+              <div class="text-slate-500">Gồm 27 giải (lô)</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
     </div>
 
   </main>
 
-  <!-- JAVASCRIPT LOGIC TÍNH TOÁN -->
+  <!-- JAVASCRIPT LOGIC TÍNH TOÁN & KATEX -->
   <script>
+    // Khởi tạo KaTeX Math Auto-render
+    function renderKatexMath() {
+      if (typeof renderMathInElement === 'function') {
+        renderMathInElement(document.body, {
+          delimiters: [
+            {left: '$$', right: '$$', display: true},
+            {left: '$', right: '$', display: false},
+            {left: '\\(', right: '\\)', display: false},
+            {left: '\\[', right: '\\]', display: true}
+          ],
+          throwOnError: false,
+          errorColor: '#ef4444',
+          strict: false,
+          ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code', 'annotation', 'annotation-xml']
+        });
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', renderKatexMath);
+    window.addEventListener('load', renderKatexMath);
+
+    // Trạng thái hiện tại
     let currentRegion = 'MN'; // 'MN' hoặc 'MB'
     let currentNumbers = ['77'];
 
-    const BET_OPTIONS = {
-      MN: [
-        { val: 'bao_lo_2', label: 'Bao Lô 2 Số (Xác 1k = 14k | Ăn x72)', digits: 2 },
-        { val: 'bao_lo_3', label: 'Bao Lô 3 Số (Ăn x620)', digits: 3 },
-        { val: 'bao_lo_4', label: 'Bao Lô 4 Số (Ăn x5200)', digits: 4 },
-        { val: 'dau_duoi', label: 'Đầu Đuôi MN/MT (10k = Xác 16k | Dò G8 & ĐB)', digits: 2 },
-        { val: 'xiu_chu', label: 'Xỉu Chủ MN/MT (3 Số | Dò G7 & ĐB | Ăn x620)', digits: 3 }
-      ],
-      MB: [
-        { val: 'bao_lo_2', label: 'Bao Lô 2 Số MB (Xác 1k = 21k | Ăn x72)', digits: 2 },
-        { val: 'bao_lo_3', label: 'Bao Lô 3 Số MB (Xác 1k = 21k | Ăn x620)', digits: 3 },
-        { val: 'dau_duoi', label: 'Đầu Đuôi MB (1k = Xác 4k | Dò 4 số G7 + ĐB)', digits: 2 },
-        { val: 'xiu_chu', label: 'Xỉu Chủ MB (10k = Xác 32k | Dò 3 số G6 + ĐB)', digits: 3 }
-      ]
-    };
+    const betOptionsMN = [
+      { value: 'bao_lo_2', text: 'Bao Lô 2 Số (Xác 1k = 14k | Ăn x72)' },
+      { value: 'bao_lo_3', text: 'Bao Lô 3 Số (Xác 1k = 14k | Ăn x620)' },
+      { value: 'bao_lo_4', text: 'Bao Lô 4 Số (Xác 1k = 14k | Ăn x5200)' },
+      { value: 'dau_duoi', text: 'Đầu Đuôi (Đánh 10k = Xác 16k | Dò G8 & ĐB)' },
+      { value: 'xiu_chu', text: 'Xỉu Chủ (3 Số | Dò G7 & ĐB | Ăn x620)' }
+    ];
 
-    function setRegion(reg) {
-      currentRegion = reg;
-      const btnMNMT = document.getElementById('btnMNMT');
-      const btnMB = document.getElementById('btnMB');
-      const provWrap = document.getElementById('provinceWrapper');
-      const mbNote = document.getElementById('mbProvinceNote');
-      const badge = document.getElementById('regionBadge');
+    const betOptionsMB = [
+      { value: 'bao_lo_2', text: 'Bao Lô 2 Số (Xác 1k = 21k | Ăn x72)' },
+      { value: 'bao_lo_3', text: 'Bao Lô 3 Số (Xác 1k = 21k | Ăn x620)' },
+      { value: 'bao_lo_4', text: 'Bao Lô 4 Số (Xác 1k = 21k | Ăn x5200)' },
+      { value: 'dau_duoi', text: 'Đầu Đuôi MB (Đánh 10k = Xác 40k | 4 số G7 & ĐB)' },
+      { value: 'xiu_chu', text: 'Xỉu Chủ MB (Đánh 10k = Xác 32k | 3 số G6 & ĐB)' }
+    ];
 
-      if (reg === 'MB') {
-        btnMB.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-indigo-700 text-white border-indigo-700 shadow-sm';
-        btnMNMT.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100';
-        provWrap.classList.add('hidden');
-        mbNote.classList.remove('hidden');
-        badge.innerText = 'Miền Bắc (MB)';
-        badge.className = 'text-xs bg-indigo-500/20 text-indigo-300 font-bold px-2.5 py-0.5 rounded-full border border-indigo-500/30';
+    function selectRegion(region) {
+      currentRegion = region;
+      const btnMN = document.getElementById('regionBtnMN');
+      const btnMB = document.getElementById('regionBtnMB');
+      const provSelect = document.getElementById('provincesCount');
+
+      if (region === 'MN') {
+        btnMN.className = 'py-2 px-3 text-xs font-bold rounded-xl border transition flex items-center justify-center gap-1.5 bg-emerald-50 text-emerald-800 border-emerald-300 ring-2 ring-emerald-500/20';
+        btnMB.className = 'py-2 px-3 text-xs font-bold rounded-xl border transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100';
+        provSelect.disabled = false;
       } else {
-        btnMNMT.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-emerald-600 text-white border-emerald-600 shadow-sm';
-        btnMB.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100';
-        provWrap.classList.remove('hidden');
-        mbNote.classList.add('hidden');
-        badge.innerText = 'Miền Nam / Trung';
-        badge.className = 'text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2.5 py-0.5 rounded-full border border-emerald-500/30';
+        btnMB.className = 'py-2 px-3 text-xs font-bold rounded-xl border transition flex items-center justify-center gap-1.5 bg-indigo-50 text-indigo-800 border-indigo-300 ring-2 ring-indigo-500/20';
+        btnMN.className = 'py-2 px-3 text-xs font-bold rounded-xl border transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100';
+        provSelect.value = '1';
+        provSelect.disabled = true;
       }
 
-      renderBetOptions();
-      onBetTypeChange();
+      updateBetTypeSelect();
+      calculate();
     }
 
-    function renderBetOptions() {
+    function updateBetTypeSelect() {
       const select = document.getElementById('betType');
-      const opts = BET_OPTIONS[currentRegion];
+      const prevVal = select.value;
+      const options = currentRegion === 'MB' ? betOptionsMB : betOptionsMN;
+
       select.innerHTML = '';
-      opts.forEach(o => {
-        const opt = document.createElement('option');
-        opt.value = o.val;
-        opt.innerText = o.label;
-        select.appendChild(opt);
+      options.forEach(opt => {
+        const o = document.createElement('option');
+        o.value = opt.value;
+        o.textContent = opt.text;
+        if (opt.value === prevVal) o.selected = true;
+        select.appendChild(o);
       });
+
+      onBetTypeChange();
     }
 
     function onBetTypeChange() {
@@ -477,7 +676,7 @@
       } else if (betType === 'bao_lo_3' || betType === 'xiu_chu') {
         digitsBadge.innerText = '(bắt buộc 3 chữ số)';
         if (currentNumbers.length === 1 && currentNumbers[0].length === 2) {
-          document.getElementById('numbersInput').value = '416';
+          document.getElementById('numbersInput').value = '775';
         }
       } else if (betType === 'bao_lo_4') {
         digitsBadge.innerText = '(bắt buộc 4 chữ số)';
@@ -500,7 +699,7 @@
       const parts = raw.split(/[\s,;.-]+/).map(s => s.trim()).filter(Boolean);
       currentNumbers = parts.length > 0 ? parts : [''];
 
-      // Render tags
+      // Hiển thị tags
       const tagsContainer = document.getElementById('numberTags');
       tagsContainer.innerHTML = '';
       currentNumbers.forEach(n => {
@@ -528,32 +727,37 @@
       let winFormula = '';
 
       if (currentRegion === 'MB') {
-        // ================= MIỀN BẮC =================
+        // Miền Bắc (MB)
         if (betType === 'bao_lo_2') {
-          unitCost = amt * 21; // 1k => 21k xác
+          unitCost = amt * 21;
           winMultiplier = 72;
-          costFormula = `${numCnt} số × ${amt}k × 21k xác = ${(unitCost * numCnt)}k`;
+          costFormula = `${numCnt} số × 1 đài × ${amt}k × 21 xác = ${(unitCost * numCnt)}k`;
           winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
         } else if (betType === 'bao_lo_3') {
           unitCost = amt * 21;
           winMultiplier = 620;
-          costFormula = `${numCnt} số × ${amt}k × 21k xác = ${(unitCost * numCnt)}k`;
+          costFormula = `${numCnt} số × 1 đài × ${amt}k × 21 xác = ${(unitCost * numCnt)}k`;
           winFormula = `${matches} nháy × ${amt}k × 620 = ${(matches * amt * winMultiplier)}k`;
+        } else if (betType === 'bao_lo_4') {
+          unitCost = amt * 21;
+          winMultiplier = 5200;
+          costFormula = `${numCnt} số × 1 đài × ${amt}k × 21 xác = ${(unitCost * numCnt)}k`;
+          winFormula = `${matches} nháy × ${amt}k × 5200 = ${(matches * amt * winMultiplier)}k`;
         } else if (betType === 'dau_duoi') {
-          // MB: 1k cược => xác 4k (4 số G7 + 1 số ĐB)
+          // 1k cược = xác 4k (10k cược = xác 40k)
           unitCost = amt * 4;
           winMultiplier = 72;
-          costFormula = `${numCnt} số × ${amt}k × 4k xác = ${(unitCost * numCnt)}k`;
+          costFormula = `${numCnt} số × 1 đài × ${amt}k × 4 xác = ${(unitCost * numCnt)}k`;
           winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
         } else if (betType === 'xiu_chu') {
-          // MB: 10k cược => xác 32k (3 số G6 + 1 số ĐB) -> hệ số 3.2
+          // 10k cược = xác 32k => hệ số 3.2
           unitCost = amt * 3.2;
           winMultiplier = 620;
-          costFormula = `${numCnt} số × (${amt}k / 10) × 32k xác = ${(unitCost * numCnt)}k`;
+          costFormula = `${numCnt} số × 1 đài × ${amt}k × 3.2 xác = ${(unitCost * numCnt)}k`;
           winFormula = `${matches} nháy × ${amt}k × 620 = ${(matches * amt * winMultiplier)}k`;
         }
       } else {
-        // ================= MIỀN NAM & MIỀN TRUNG =================
+        // Miền Nam & Miền Trung (MN & MT)
         if (betType === 'bao_lo_2') {
           unitCost = amt * 14;
           winMultiplier = 72;
@@ -570,7 +774,7 @@
           costFormula = `${numCnt} số × ${provCnt} đài × ${amt}k × 14 xác = ${(unitCost * provCnt * numCnt)}k`;
           winFormula = `${matches} nháy × ${amt}k × 5200 = ${(matches * amt * winMultiplier)}k`;
         } else if (betType === 'dau_duoi') {
-          unitCost = amt * 1.6; // 10k => 16k
+          unitCost = amt * 1.6;
           winMultiplier = 72;
           costFormula = `${numCnt} số × ${provCnt} đài × (${amt}k / 10) × 16k xác = ${(unitCost * provCnt * numCnt)}k`;
           winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
@@ -590,30 +794,30 @@
       document.getElementById('costFormulaDetail').innerText = costFormula;
       document.getElementById('winFormulaDetail').innerText = winFormula;
 
-      document.getElementById('totalCostDisplay').innerText = (totalCostK * 1000).toLocaleString('vi-VN') + ' đ';
-      document.getElementById('totalWinDisplay').innerText = (totalWinK * 1000).toLocaleString('vi-VN') + ' đ';
+      document.getElementById('totalCostDisplay').innerText = Math.round(totalCostK * 1000).toLocaleString('vi-VN') + ' đ';
+      document.getElementById('totalWinDisplay').innerText = Math.round(totalWinK * 1000).toLocaleString('vi-VN') + ' đ';
 
       const profitEl = document.getElementById('netProfitDisplay');
       if (profitK >= 0) {
-        profitEl.innerText = '+' + (profitK * 1000).toLocaleString('vi-VN') + ' đ';
-        profitEl.className = 'text-lg font-extrabold text-emerald-400 font-mono-num';
+        profitEl.innerText = '+' + Math.round(profitK * 1000).toLocaleString('vi-VN') + ' đ';
+        profitEl.className = 'text-base sm:text-lg font-extrabold text-emerald-400 font-mono-num';
       } else {
-        profitEl.innerText = (profitK * 1000).toLocaleString('vi-VN') + ' đ';
-        profitEl.className = 'text-lg font-extrabold text-rose-400 font-mono-num';
+        profitEl.innerText = Math.round(profitK * 1000).toLocaleString('vi-VN') + ' đ';
+        profitEl.className = 'text-base sm:text-lg font-extrabold text-rose-400 font-mono-num';
       }
     }
 
     function copyTicketMessage() {
-      const regName = currentRegion === 'MB' ? 'Miền Bắc (MB)' : 'Miền Nam / Miền Trung';
       const typeText = document.getElementById('betType').selectedOptions[0].text.split('(')[0].trim();
-      const provCnt = currentRegion === 'MB' ? '1 đài (MB)' : document.getElementById('provincesCount').value + ' đài';
+      const regionText = currentRegion === 'MB' ? 'Miền Bắc' : 'Miền Nam/Trung';
+      const provCnt = currentRegion === 'MB' ? '1' : document.getElementById('provincesCount').value;
       const numbers = currentNumbers.filter(Boolean).join(', ');
       const amt = document.getElementById('betAmount').value;
       const cost = document.getElementById('totalCostDisplay').innerText;
       const win = document.getElementById('totalWinDisplay').innerText;
       const matches = document.getElementById('hitMatches').value;
 
-      const msg = `🎰 XÁC NHẬN VÉ CƯỢC LOTO\n-------------------------\n• Khu vực: ${regName}\n• Kiểu cược: ${typeText}\n• Số đánh: [ ${numbers} ]\n• Số đài: ${provCnt}\n• Điểm cược: ${amt}k / con\n• TIỀN XÁC CẦN THU: ${cost}\n• TIỀN TRÚNG (${matches} nháy): ${win}\n-------------------------\n(Dò thưởng theo kết quả: MinhChinh.com)`;
+      const msg = `🎰 XÁC NHẬN VÉ CƯỢC LOTO\n-------------------------\n• Khu vực: ${regionText}\n• Kiểu cược: ${typeText}\n• Số đánh: [ ${numbers} ]\n• Số lượng đài: ${provCnt} đài\n• Điểm cược: ${amt}k / con\n• TIỀN XÁC CẦN THU: ${cost}\n• TIỀN TRÚNG (${matches} nháy): ${win}\n-------------------------\n(Dò thưởng theo kết quả: MinhChinh.com)`;
 
       navigator.clipboard.writeText(msg).then(() => {
         const notice = document.getElementById('copyNotice');
@@ -622,9 +826,8 @@
       });
     }
 
-    // Khởi chạy
-    renderBetOptions();
-    parseNumbersInput();
+    // Khởi chạy tính toán ban đầu
+    updateBetTypeSelect();
   </script>
 </body>
 </html>

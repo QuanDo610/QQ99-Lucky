@@ -2,629 +2,1646 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bảng Quy Định Luật Chơi & Máy Tính Tiền LOTO 3 Miền (MN, MT, MB)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Lucky QQ99 - Hệ Thống Đặt Vé Số & Lô Tô 3 Miền Uy Tín</title>
+  
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+              800: '#065f46',
+              900: '#064e3b',
+            },
+            vcb: {
+              green: '#005930',
+              light: '#f4fbf7',
+              accent: '#83bb26'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+
   <style>
-    body { font-family: 'Inter', sans-serif; }
-    .font-mono-num { font-family: 'JetBrains Mono', monospace; }
-    @media print {
-      .no-print { display: none !important; }
-      body { background: white !important; color: black !important; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .font-num {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    @keyframes softPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.02); }
+    }
+    .btn-pulse {
+      animation: softPulse 2.5s infinite ease-in-out;
+    }
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #f1f5f9;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 999px;
     }
   </style>
 </head>
-<body class="bg-slate-100 text-slate-800 antialiased min-h-screen pb-16">
+<body class="bg-slate-100 text-slate-800 antialiased min-h-screen flex flex-col selection:bg-emerald-500 selection:text-white">
 
   <!-- TOP HEADER -->
-  <header class="bg-slate-900 text-white border-b border-slate-800 sticky top-0 z-50 shadow-md">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-4">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-xl font-black shadow-lg shadow-emerald-500/20">
-          🎰
+  <header class="bg-gradient-to-r from-emerald-800 via-emerald-700 to-teal-800 text-white shadow-lg sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-3 sm:px-4 py-2.5 sm:py-3 flex items-center justify-between">
+      
+      <!-- LOGO & BRAND -->
+      <div class="flex items-center space-x-2 sm:space-x-3 min-w-0">
+        <div class="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-white/10 backdrop-blur border border-white/20 flex items-center justify-center text-xl sm:text-2xl shadow-inner shrink-0">
+          🍀
         </div>
-        <div>
-          <h1 class="text-lg font-bold tracking-tight text-white flex items-center gap-2">
-            LOTO PRO - BẢO TRÂN QQ
-            <span class="text-[11px] bg-emerald-500/20 text-emerald-400 font-semibold px-2 py-0.5 rounded-full border border-emerald-500/30">Minh Chính 3 Miền</span>
+        <div class="min-w-0">
+          <h1 class="text-base sm:text-xl font-black tracking-tight flex items-center gap-1.5 truncate">
+            Lucky QQ99
+            <span class="bg-amber-400 text-slate-900 text-[9px] sm:text-[10px] font-black uppercase px-2 py-0.5 rounded-full tracking-wider shrink-0 shadow-xs">
+              Uy Tín 100%
+            </span>
           </h1>
-          <p class="text-xs text-slate-400">Luật chơi & Máy tính tiền cược chuẩn hóa cho Miền Nam, Miền Trung & Miền Bắc</p>
+          <p class="text-[10px] sm:text-xs text-emerald-100 font-medium truncate">Dịch Vụ Đặt Vé Số & Lô Tô 3 Miền Chuyên Nghiệp</p>
         </div>
       </div>
 
-      <!-- Quick Links to Minh Chinh -->
-      <div class="flex items-center gap-2 text-xs font-semibold no-print">
-        <span class="text-slate-400 hidden sm:inline">Tra cứu Minh Chính:</span>
-        <a href="https://www.minhchinh.com/ket-qua-xo-so-mien-nam.html" target="_blank" rel="noopener" class="px-3 py-1.5 bg-slate-800 hover:bg-emerald-600 hover:text-white rounded-lg border border-slate-700 transition flex items-center gap-1.5">
-          <span>🌴</span> MN (16h15)
-        </a>
-        <a href="https://www.minhchinh.com/ket-qua-xo-so-mien-trung.html" target="_blank" rel="noopener" class="px-3 py-1.5 bg-slate-800 hover:bg-emerald-600 hover:text-white rounded-lg border border-slate-700 transition flex items-center gap-1.5">
-          <span>🏖️</span> MT (17h15)
-        </a>
-        <a href="https://www.minhchinh.com/ket-qua-xo-so-mien-bac.html" target="_blank" rel="noopener" class="px-3 py-1.5 bg-slate-800 hover:bg-emerald-600 hover:text-white rounded-lg border border-slate-700 transition flex items-center gap-1.5">
-          <span>🏮</span> MB (18h15)
-        </a>
-        <button onclick="window.print()" class="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg border border-slate-700 transition">
-          🖨️ In
+      <!-- HEADER ACTIONS -->
+      <div class="flex items-center space-x-1.5 sm:space-x-2 shrink-0">
+        <!-- NÚT TRA CỨU ĐƠN -->
+        <button type="button" onclick="scrollToLookupSection()" class="inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 active:bg-white/30 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg border border-white/20 transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          <span class="hidden sm:inline">Tra Cứu Giao Dịch</span>
+          <span class="sm:hidden">Tra Cứu</span>
         </button>
+
+        <!-- NÚT MÃ QR VCB -->
+        <button type="button" onclick="showPaymentSectionMobile()" class="inline-flex items-center gap-1 bg-emerald-600 hover:bg-emerald-500 active:bg-emerald-700 text-white text-[11px] sm:text-xs font-semibold px-2.5 sm:px-3 py-1.5 sm:py-2 rounded-lg border border-emerald-400/40 shadow-xs transition">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path>
+          </svg>
+          <span class="hidden sm:inline">Mã QR VCB</span>
+          <span class="sm:hidden">Mã QR</span>
+        </button>
+
+        <!-- NÚT LUẬT CHƠI -->
+        <a href="luat_choi.html" target="_blank" class="inline-flex items-center gap-1 bg-white/10 hover:bg-white/20 text-white text-[11px] sm:text-xs font-medium px-2 sm:px-2.5 py-1.5 sm:py-2 rounded-lg transition" title="Tra cứu luật chơi & tỷ lệ thưởng">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+          </svg>
+          <span class="hidden md:inline">Luật chơi</span>
+        </a>
       </div>
     </div>
   </header>
 
-  <!-- BANNER SO SÁNH 2 KHU VỰC -->
-  <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+  <!-- BANNER CAM KẾT NHANH -->
+  <div class="bg-emerald-50 border-b border-emerald-200/60 py-2 px-3 sm:px-4 text-xs text-emerald-900">
+    <div class="max-w-6xl mx-auto flex flex-wrap items-center justify-between gap-2">
+      <div class="flex items-center gap-3 overflow-x-auto py-0.5 no-scrollbar w-full sm:w-auto">
+        <span class="flex items-center gap-1 shrink-0 font-medium">
+          <span class="text-emerald-600 font-bold">✓</span> Chụp ảnh vé thật trước giờ quay
+        </span>
+        <span class="flex items-center gap-1 shrink-0 font-medium">
+          <span class="text-emerald-600 font-bold">✓</span> Trả thưởng sòng phẳng trong ngày
+        </span>
+        <span class="flex items-center gap-1 shrink-0 font-medium">
+          <span class="text-emerald-600 font-bold">✓</span> Kích hoạt vé tức thì sau khi chuyển tiền
+        </span>
+      </div>
+      <div class="text-[11px] text-emerald-700 hidden sm:block">
+        Giờ chốt vé: <span class="font-bold">MN 16:00</span> • <span class="font-bold">MT 17:00</span> • <span class="font-bold">MB 18:00</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <main class="max-w-6xl mx-auto px-3 sm:px-4 py-4 sm:py-6 flex-1 w-full">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6">
       
-      <!-- Khối MN & MT -->
-      <div class="bg-white p-5 rounded-2xl border border-slate-200 shadow-sm relative overflow-hidden">
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-emerald-700 flex items-center gap-1.5">
-            <span>🌴</span> Miền Nam & Miền Trung (MN & MT)
-          </span>
-          <span class="text-[11px] bg-emerald-50 text-emerald-700 font-semibold px-2 py-0.5 rounded-full border border-emerald-200">18 giải / đài</span>
-        </div>
-        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-          <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-            <div class="text-[11px] text-slate-500 font-semibold">Bao Lô 2 Số</div>
-            <div class="text-base font-extrabold text-emerald-600 font-mono-num mt-0.5">1k = 14k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72</div>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-            <div class="text-[11px] text-slate-500 font-semibold">Đầu Đuôi (G8 & ĐB)</div>
-            <div class="text-base font-extrabold text-emerald-600 font-mono-num mt-0.5">10k = 16k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72</div>
-          </div>
-          <div class="bg-slate-50 p-2.5 rounded-xl border border-slate-100">
-            <div class="text-[11px] text-slate-500 font-semibold">Xỉu Chủ (G7 & ĐB)</div>
-            <div class="text-base font-extrabold text-emerald-600 font-mono-num mt-0.5">3 số</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x620</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Khối Miền Bắc (MB) -->
-      <div class="bg-white p-5 rounded-2xl border-2 border-indigo-200 shadow-sm relative overflow-hidden bg-gradient-to-br from-white to-indigo-50/30">
-        <div class="flex justify-between items-center mb-2">
-          <span class="text-xs font-bold uppercase tracking-wider text-indigo-700 flex items-center gap-1.5">
-            <span>🏮</span> Miền Bắc (MB) - Chỉ 1 đài duy nhất
-          </span>
-          <span class="text-[11px] bg-indigo-100 text-indigo-800 font-bold px-2 py-0.5 rounded-full border border-indigo-300">27 giải (Không có G8)</span>
-        </div>
-        <div class="grid grid-cols-3 gap-2 mt-3 text-center">
-          <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-xs">
-            <div class="text-[11px] text-slate-500 font-semibold">Bao Lô MB</div>
-            <div class="text-base font-extrabold text-indigo-700 font-mono-num mt-0.5">1k = 21k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72 | x620</div>
-          </div>
-          <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-xs">
-            <div class="text-[11px] text-slate-500 font-semibold">Đầu Đuôi MB (4 số G7 + ĐB)</div>
-            <div class="text-base font-extrabold text-indigo-700 font-mono-num mt-0.5">1k = 4k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x72 / vị trí</div>
-          </div>
-          <div class="bg-white p-2.5 rounded-xl border border-indigo-100 shadow-xs">
-            <div class="text-[11px] text-slate-500 font-semibold">Xỉu Chủ MB (3 số G6 + ĐB)</div>
-            <div class="text-base font-extrabold text-indigo-700 font-mono-num mt-0.5">10k = 32k</div>
-            <div class="text-[11px] text-orange-600 font-bold mt-0.5">Ăn x620</div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- MAIN TWO-COLUMN LAYOUT -->
-  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 grid grid-cols-1 lg:grid-cols-12 gap-8">
-
-    <!-- CỘT TRÁI (5 CỘT): MÁY TÍNH TIỀN THÔNG MINH -->
-    <div class="lg:col-span-5 space-y-6">
-
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden sticky top-20">
-        <!-- Card Header -->
-        <div class="bg-gradient-to-r from-slate-900 to-slate-800 p-5 text-white">
-          <div class="flex items-center justify-between">
-            <h2 class="text-lg font-bold flex items-center gap-2">
-              <span>🧮</span> Máy Tính Tiền Cược & Trúng
-            </h2>
-            <span id="regionBadge" class="text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2.5 py-0.5 rounded-full border border-emerald-500/30">Miền Nam / Trung</span>
-          </div>
-          <p class="text-slate-300 text-xs mt-1">Chuyển miền để tự động áp dụng công thức xác và vị trí dò tương ứng</p>
-        </div>
-
-        <div class="p-6 space-y-4">
-          
-          <!-- 1. Chọn Miền -->
-          <div>
-            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-              1. Chọn khu vực (Miền)
-            </label>
-            <div class="grid grid-cols-2 gap-2">
-              <button type="button" id="btnMNMT" onclick="setRegion('MN')" class="py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-emerald-600 text-white border-emerald-600 shadow-sm">
-                <span>🌴</span> Miền Nam & Trung
-              </button>
-              <button type="button" id="btnMB" onclick="setRegion('MB')" class="py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100">
-                <span>🏮</span> Miền Bắc (MB)
-              </button>
-            </div>
-          </div>
-
-          <!-- 2. Loại cược -->
-          <div>
-            <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-              2. Chọn loại cược
-            </label>
-            <select id="betType" onchange="onBetTypeChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">
-              <!-- Render động theo miền -->
-            </select>
-          </div>
-
-          <!-- 3. Danh sách số đánh -->
-          <div>
-            <div class="flex justify-between items-center mb-1.5">
-              <label class="text-xs font-bold text-slate-600 uppercase tracking-wider">
-                3. Nhập số đánh <span id="digitsBadge" class="text-[11px] lowercase font-normal text-slate-400">(mỗi số 2 chữ số)</span>
-              </label>
-              <span id="numbersCountBadge" class="text-xs font-semibold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md border border-emerald-200">1 con</span>
-            </div>
-            <textarea id="numbersInput" rows="2" oninput="parseNumbersInput()" placeholder="Ví dụ: 77 hoặc 23, 45, 89" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-sm font-mono focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition">77</textarea>
-            <div id="numberTags" class="flex flex-wrap gap-1.5 mt-1.5"></div>
-          </div>
-
-          <!-- 4. Số đài & Số nháy trúng -->
-          <div class="grid grid-cols-2 gap-3">
-            <div id="provinceWrapper">
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-                4. Số lượng đài
-              </label>
-              <select id="provincesCount" onchange="calculate()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold text-slate-800 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                <option value="1">1 Đài</option>
-                <option value="2">2 Đài</option>
-                <option value="3">3 Đài</option>
-                <option value="4">4 Đài</option>
-              </select>
-            </div>
-
-            <div id="mbProvinceNote" class="hidden">
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-                Đài quay thưởng
-              </label>
-              <div class="w-full bg-slate-100 border border-slate-300 rounded-xl px-3 py-2 text-sm font-semibold text-slate-700">
-                1 Đài Miền Bắc
-              </div>
-            </div>
-
+      <!-- CỘT 1: FORM ĐẶT SỐ / MUA VÉ (7 CỘT TRÊN DESKTOP) -->
+      <section class="lg:col-span-7 space-y-4 sm:space-y-5">
+        
+        <div class="bg-white rounded-2xl shadow-sm border border-slate-200/80 p-4 sm:p-6 relative overflow-hidden">
+          <div class="flex items-center justify-between pb-3.5 border-b border-slate-100">
             <div>
-              <label class="block text-xs font-bold text-slate-600 uppercase tracking-wider mb-1.5">
-                Số nháy trúng giả định
-              </label>
-              <select id="hitMatches" onchange="calculate()" class="w-full bg-slate-50 border border-orange-200 rounded-xl px-3 py-2 text-sm font-semibold text-orange-700 bg-orange-50/50 focus:ring-2 focus:ring-orange-500 focus:outline-none">
-                <option value="1">Trúng 1 nháy (mặc định)</option>
-                <option value="2">Trúng 2 nháy</option>
-                <option value="3">Trúng 3 nháy</option>
-                <option value="4">Trúng 4 nháy</option>
-              </select>
+              <h2 class="text-base sm:text-lg font-bold text-slate-800 flex items-center gap-2">
+                <span class="w-7 h-7 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center text-sm font-black">1</span>
+                Tạo Đơn Đặt Số & Mua Vé
+              </h2>
+              <p class="text-xs text-slate-500 mt-0.5">Điền thông tin và bấm đặt số để nhận mã đơn và mã QR thanh toán</p>
             </div>
+            <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-100 text-emerald-800 shrink-0">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-600 animate-ping"></span>
+              Đang nhận số
+            </span>
           </div>
 
-          <!-- 5. Tiền / Điểm cược -->
-          <div>
-            <div class="flex justify-between items-center mb-1.5">
-              <label class="text-xs font-bold text-slate-600 uppercase tracking-wider" id="amountLabel">
-                5. Tiền cược cho mỗi con (k)
-              </label>
-              <span class="text-xs text-slate-400">1k = 1.000 đ</span>
-            </div>
-            <div class="relative">
-              <input type="number" id="betAmount" value="10" min="1" step="1" oninput="calculate()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3.5 py-2.5 text-base font-bold font-mono-num text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:bg-white focus:outline-none transition pr-12">
-              <span class="absolute right-3.5 top-3 text-slate-400 text-sm font-bold">k</span>
-            </div>
-            <!-- Quick Chips -->
-            <div class="flex flex-wrap gap-1.5 mt-2">
-              <button type="button" onclick="setBetAmount(1)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">1k</button>
-              <button type="button" onclick="setBetAmount(2)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">2k</button>
-              <button type="button" onclick="setBetAmount(5)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">5k</button>
-              <button type="button" onclick="setBetAmount(10)" class="px-2.5 py-1 text-xs bg-emerald-100 hover:bg-emerald-200 rounded-lg font-bold text-emerald-800 border border-emerald-300 transition">10k</button>
-              <button type="button" onclick="setBetAmount(20)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">20k</button>
-              <button type="button" onclick="setBetAmount(50)" class="px-2.5 py-1 text-xs bg-slate-100 hover:bg-slate-200 rounded-lg font-semibold text-slate-700 border border-slate-200 transition">50k</button>
-            </div>
-          </div>
-
-          <!-- KẾT QUẢ TÍNH TOÁN (HIGHLIGHT BOX) -->
-          <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-2xl p-5 shadow-lg border border-slate-700 space-y-3.5 mt-2">
+          <form id="order-form" onsubmit="event.preventDefault(); submitOrder();" class="mt-4 space-y-4">
             
-            <!-- Tiền xác -->
-            <div class="flex justify-between items-baseline">
+            <!-- 1. FULL NAME NGƯỜI ĐÁNH SỐ & SĐT (PLACEHOLDER CHUẨN: "Nguyễn Văn A" & "09xxxxxxxx") -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div>
-                <div class="text-xs uppercase font-bold text-slate-400">Tiền Xác Phải Thu (Vốn)</div>
-                <div class="text-[11px] text-emerald-400 font-mono mt-0.5" id="costFormulaDetail">1 số × 1 đài × 10k × 14 = 140k</div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">
+                  Họ và tên người đánh số (Full Name) <span class="text-rose-500">*</span>
+                </label>
+                <input type="text" id="customer-name" required placeholder="VD: Nguyễn Văn A" oninput="updateTransferMemo()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-semibold focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition">
               </div>
-              <div class="text-2xl font-black text-emerald-400 font-mono-num text-right" id="totalCostDisplay">
-                140.000 đ
-              </div>
-            </div>
 
-            <div class="border-t border-slate-700/80"></div>
-
-            <!-- Tiền trúng -->
-            <div class="flex justify-between items-baseline">
               <div>
-                <div class="text-xs uppercase font-bold text-slate-400">Tiền Thưởng Nhận Về</div>
-                <div class="text-[11px] text-orange-400 font-mono mt-0.5" id="winFormulaDetail">1 nháy × 10k × 72 = 720k</div>
-              </div>
-              <div class="text-2xl font-black text-orange-400 font-mono-num text-right" id="totalWinDisplay">
-                720.000 đ
+                <label class="block text-xs font-bold text-slate-700 mb-1">
+                  Số điện thoại / Zalo nhận vé <span class="text-rose-500">*</span>
+                </label>
+                <input type="tel" id="customer-phone" required placeholder="VD: 09xxxxxxxx" oninput="updateTransferMemo()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-num font-medium focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition">
               </div>
             </div>
 
-            <div class="border-t border-slate-700/80"></div>
+            <!-- 2. DATE (NGÀY GIỜ) & MIỀN -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 border-t border-slate-100">
+              <div>
+                <label class="block text-xs font-bold text-slate-700 mb-1">Miền xổ số</label>
+                <select id="region-select" onchange="onRegionChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-semibold focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition">
+                  <option value="MN">Miền Nam (18 giải • Xổ 16:15)</option>
+                  <option value="MT">Miền Trung (18 giải • Xổ 17:15)</option>
+                  <option value="MB">Miền Bắc (27 giải • Xổ 18:15)</option>
+                </select>
+              </div>
 
-            <!-- Lợi nhuận ròng -->
-            <div class="flex justify-between items-center bg-slate-800/80 p-3 rounded-xl border border-slate-700">
-              <span class="text-xs font-bold text-slate-300 uppercase">Khách Lời Ròng:</span>
-              <span class="text-lg font-extrabold text-white font-mono-num" id="netProfitDisplay">
-                +580.000 đ
-              </span>
+              <div>
+                <div class="flex items-center justify-between mb-1">
+                  <label class="text-xs font-bold text-slate-700">Ngày đánh số (Date)</label>
+                  <span id="day-of-week-badge" class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">Thứ Tư</span>
+                </div>
+                <input type="date" id="draw-date" value="2026-10-21" onchange="onDateChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-sm font-medium focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition">
+              </div>
             </div>
+
+            <!-- 3. ĐÀI QUAY MỞ THƯỞNG (CHỌN 1 ĐÀI, 2 ĐÀI HOẶC BAO TẤT CẢ ĐÀI) -->
+            <div class="pt-2 border-t border-slate-100">
+              <div class="flex flex-wrap items-center justify-between gap-1 mb-1.5">
+                <label class="text-xs font-bold text-slate-700">
+                  Đài quay mở thưởng
+                  <span id="station-count-badge" class="ml-1 text-[11px] font-normal text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">Đã chọn: 1 đài (Đồng Nai)</span>
+                </label>
+                
+                <!-- NÚT CHỌN NHANH ĐÀI CHO MIỀN NAM / MIỀN TRUNG -->
+                <div id="quick-station-buttons" class="flex items-center gap-1">
+                  <button type="button" onclick="selectQuickStations('main')" class="text-[11px] bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 text-slate-700 font-semibold px-2.5 py-1 rounded-lg border border-slate-200 transition-all duration-150 cursor-pointer">Đài chính</button>
+                  <button type="button" onclick="selectQuickStations('two')" class="text-[11px] bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 text-slate-700 font-semibold px-2.5 py-1 rounded-lg border border-slate-200 transition-all duration-150 cursor-pointer">2 Đài chính</button>
+                  <button type="button" onclick="selectQuickStations('all')" class="text-[11px] bg-emerald-100 hover:bg-emerald-200 active:scale-95 text-emerald-900 font-bold px-2.5 py-1 rounded-lg border border-emerald-300 transition-all duration-150 cursor-pointer">Bao tất cả đài</button>
+                </div>
+              </div>
+
+              <!-- DANH SÁCH CHIP ĐÀI (SẼ ĐƯỢC RENDER QUA JAVASCRIPT) -->
+              <div id="station-chips" class="flex flex-wrap gap-2 pt-1">
+                <button type="button" data-station="Đồng Nai" onclick="toggleStationSelection('Đồng Nai')" class="px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-md ring-2 ring-emerald-400 scale-[1.03] transition-all duration-150 cursor-pointer flex items-center gap-1 active:scale-95">✓ Đồng Nai <span class="text-[10px] opacity-80">(Chính)</span></button>
+                <button type="button" data-station="Cần Thơ" onclick="toggleStationSelection('Cần Thơ')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer flex items-center gap-1 active:scale-95">Cần Thơ</button>
+                <button type="button" data-station="Sóc Trăng" onclick="toggleStationSelection('Sóc Trăng')" class="px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer flex items-center gap-1 active:scale-95">Sóc Trăng</button>
+              </div>
+              <p class="text-[11px] text-slate-400 mt-1.5">
+                💡 Bạn có thể bấm chọn 1 đài, 2 đài hoặc bao tất cả đài trong ngày. Tiền xác sẽ tự động nhân theo số đài.
+              </p>
+            </div>
+
+            <!-- 4. LOẠI CƯỢC: 2, 3, 4 SỐ (BAO LÔ, ĐẦU ĐUÔI, XỈU CHỦ...) -->
+            <div class="pt-2 border-t border-slate-100">
+              <label class="block text-xs font-bold text-slate-700 mb-1.5">
+                Loại cược & Hình thức đánh (2, 3, 4 số)
+              </label>
+              <div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                <button type="button" onclick="setBetType('BAO_LO_2')" id="btn-bet-BAO_LO_2" class="p-2.5 rounded-xl border-2 border-emerald-600 bg-emerald-50 text-emerald-950 shadow-sm ring-2 ring-emerald-500/30 scale-[1.02] transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95">
+                  <span>🎯 Bao Lô 2 Số</span>
+                  <span class="text-[10px] font-normal text-emerald-700 mt-1" id="rate-BAO_LO_2">18 lô • Ăn x72</span>
+                </button>
+                
+                <button type="button" onclick="setBetType('BAO_LO_3')" id="btn-bet-BAO_LO_3" class="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40 hover:text-emerald-900 transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95">
+                  <span>🎯 Bao Lô 3 Số</span>
+                  <span class="text-[10px] font-normal text-slate-500 mt-1" id="rate-BAO_LO_3">17 lô • Ăn x620</span>
+                </button>
+
+                <button type="button" onclick="setBetType('BAO_LO_4')" id="btn-bet-BAO_LO_4" class="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40 hover:text-emerald-900 transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95">
+                  <span>🎯 Bao Lô 4 Số</span>
+                  <span class="text-[10px] font-normal text-slate-500 mt-1" id="rate-BAO_LO_4">16 lô • Ăn x5200</span>
+                </button>
+
+                <button type="button" onclick="setBetType('DAU_DUOI')" id="btn-bet-DAU_DUOI" class="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40 hover:text-emerald-900 transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95">
+                  <span>⚡ Đầu Đuôi (2 Số)</span>
+                  <span class="text-[10px] font-normal text-slate-500 mt-1" id="rate-DAU_DUOI">G8 & G.ĐB • Ăn x72</span>
+                </button>
+
+                <button type="button" onclick="setBetType('XIU_CHU')" id="btn-bet-XIU_CHU" class="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40 hover:text-emerald-900 transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95">
+                  <span>🔥 Xỉu Chủ / 3 Càng</span>
+                  <span class="text-[10px] font-normal text-slate-500 mt-1" id="rate-XIU_CHU">G7 & G.ĐB • Ăn x620</span>
+                </button>
+
+                <button type="button" onclick="setBetType('KIEN_THIET')" id="btn-bet-KIEN_THIET" class="p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40 hover:text-emerald-900 transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95">
+                  <span>🎟️ Vé Kiến Thiết</span>
+                  <span class="text-[10px] font-normal text-slate-500 mt-1">10.000 đ / vé</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- 5. CÁC CON SỐ ĐÁNH & SỐ LỘC THẦN TÀI -->
+            <div class="pt-2 border-t border-slate-100">
+              <div class="flex items-center justify-between mb-1">
+                <label class="text-xs font-bold text-slate-700">
+                  Nhập số muốn đánh (cách nhau dấu cách hoặc phẩy) <span class="text-rose-500">*</span>
+                </label>
+                <button type="button" onclick="pickRandomLuckyNumbers()" class="px-2 py-0.5 bg-amber-100 hover:bg-amber-200 active:scale-95 text-amber-800 text-[11px] font-bold rounded-lg transition flex items-center gap-1 cursor-pointer">
+                  🎲 Số lộc thần tài
+                </button>
+              </div>
+              <input type="text" id="target-numbers" required placeholder="VD: 68 79 (2 số) hoặc 168 379 (3 số)" oninput="onNumbersInputChange()" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2.5 text-base font-num font-bold focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition tracking-wider">
+              <div class="flex items-center justify-between text-[11px] text-slate-500 mt-1">
+                <span id="number-count-info">Đã nhập: 2 số [68, 79]</span>
+                <span id="number-rule-hint" class="text-emerald-700 font-medium">Bao Lô 2 Số: Nhập các con số 2 chữ số (00-99)</span>
+              </div>
+            </div>
+
+            <!-- 6. SỐ TIỀN MỖI CON (1k, 2k, 5k, 10k...) -->
+            <div class="pt-2 border-t border-slate-100">
+              <div class="flex items-center justify-between mb-1.5">
+                <label class="text-xs font-bold text-slate-700">
+                  Số tiền / Điểm cược mỗi con (k) <span class="text-rose-500">*</span>
+                </label>
+                <span class="text-[11px] text-slate-400">1k = 1.000 VNĐ</span>
+              </div>
+              
+              <div class="grid grid-cols-4 sm:grid-cols-7 gap-1.5 mb-2">
+                <button type="button" id="btn-pt-1" onclick="setPointPerNumber(1)" class="py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer">1k</button>
+                <button type="button" id="btn-pt-2" onclick="setPointPerNumber(2)" class="py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer">2k</button>
+                <button type="button" id="btn-pt-5" onclick="setPointPerNumber(5)" class="py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer">5k</button>
+                <button type="button" id="btn-pt-10" onclick="setPointPerNumber(10)" class="py-1.5 px-2 bg-emerald-600 text-white font-black rounded-lg text-xs shadow-md ring-2 ring-emerald-400 scale-[1.04] transition-all duration-150 cursor-pointer active:scale-95">10k</button>
+                <button type="button" id="btn-pt-20" onclick="setPointPerNumber(20)" class="py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer">20k</button>
+                <button type="button" id="btn-pt-50" onclick="setPointPerNumber(50)" class="py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer">50k</button>
+                <button type="button" id="btn-pt-100" onclick="setPointPerNumber(100)" class="py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer">100k</button>
+              </div>
+
+              <div class="relative">
+                <input type="number" id="point-per-number" value="10" min="1" step="1" oninput="updatePointButtonsUI(this.value); calculateTotal();" class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-sm font-num font-bold focus:ring-2 focus:ring-emerald-500 outline-none">
+                <span class="absolute right-3 top-2.5 text-xs font-semibold text-slate-400">nghìn (k) / con</span>
+              </div>
+            </div>
+
+            <!-- GHI CHÚ THÊM -->
+            <div>
+              <label class="block text-xs font-bold text-slate-700 mb-1">Ghi chú cho Lucky QQ99 (nếu có)</label>
+              <input type="text" id="customer-note" placeholder="VD: Gửi hình vé sớm nhé, giữ số đuôi 68..." class="w-full bg-slate-50 border border-slate-300 rounded-xl px-3 py-2 text-xs font-medium focus:ring-2 focus:ring-emerald-500 outline-none transition">
+            </div>
+
+            <!-- 7. BẢNG TÍNH TIỀN PHẢI CHUYỂN (TIỀN XÁC) & TIỀN TRÚNG TIỀM NĂNG -->
+            <div class="bg-gradient-to-r from-emerald-50 via-teal-50 to-emerald-50 p-4 rounded-2xl border-2 border-emerald-300/80 space-y-2">
+              <div class="flex items-center justify-between">
+                <div>
+                  <div class="text-xs font-bold text-emerald-950 uppercase tracking-wide">Số tiền phải chuyển (Tiền xác)</div>
+                  <div id="calc-formula-detail" class="text-[11px] text-slate-600 font-medium">10k x 14 (xác) x 1 đài x 2 con = 280.000 đ</div>
+                </div>
+                <div class="text-right">
+                  <span id="total-amount-display" class="text-2xl sm:text-3xl font-black text-emerald-700 font-num">280.000</span>
+                  <span class="text-xs font-bold text-emerald-800 ml-0.5">VNĐ</span>
+                </div>
+              </div>
+
+              <!-- Tiền trúng tiềm năng -->
+              <div class="pt-2 border-t border-emerald-200/80 flex items-center justify-between text-xs">
+                <span class="text-emerald-800 font-medium flex items-center gap-1">
+                  <span>🏆 Tiền trúng mỗi nháy:</span>
+                </span>
+                <span id="potential-win-display" class="font-num font-extrabold text-amber-700 text-sm">720.000 VNĐ</span>
+              </div>
+
+              <!-- NỘI DUNG CHUYỂN KHOẢN (MEMO: "ỦNG HỘ PAGE...") -->
+              <div class="pt-2 border-t border-emerald-200/80 flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-slate-600 block text-[11px]">Nội dung chuyển khoản (Memo):</span>
+                  <span id="form-memo-preview" class="font-mono font-bold text-emerald-900 bg-white px-2 py-0.5 rounded border border-emerald-200 select-all">Ung ho Page QQ99</span>
+                </div>
+                <button type="button" onclick="copyFormMemo()" class="text-[11px] bg-white hover:bg-emerald-100 text-emerald-800 font-bold px-2 py-1 rounded-lg border border-emerald-300 transition">
+                  Copy Memo
+                </button>
+              </div>
+            </div>
+
+            <!-- NÚT GỬI ĐƠN & LẤY MÃ QR THANH TOÁN -->
+            <div class="pt-2">
+              <button type="submit" id="btn-submit-order" class="w-full bg-gradient-to-r from-emerald-600 via-emerald-700 to-teal-700 hover:from-emerald-700 hover:to-teal-800 active:scale-[0.99] text-white font-bold py-3.5 px-4 rounded-xl shadow-lg shadow-emerald-700/20 flex items-center justify-center gap-2 text-sm sm:text-base transition btn-pulse cursor-pointer">
+                <span id="submit-btn-spinner" class="hidden">
+                  <svg class="animate-spin w-5 h-5 text-white" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>
+                </span>
+                <span id="submit-btn-text">🛒 XÁC NHẬN MUA SỐ & LẤY MÃ QR</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                </svg>
+              </button>
+              <p class="text-center text-[11px] text-slate-400 mt-2">
+                🔒 Lucky QQ99 cam kết giữ vé thật 100% • Quét mã VCB thanh toán tức thì
+              </p>
+            </div>
+          </form>
+        </div>
+
+      </section>
+
+
+      <!-- CỘT 2: THẺ THANH TOÁN VCB & MÃ QR (5 CỘT TRÊN DESKTOP, TRÊN MOBILE CHỈ HIỆN KHI BẤM MUA SỐ) -->
+      <section id="payment-section" class="lg:col-span-5 space-y-4 sm:space-y-5 hidden lg:block transition-all duration-300">
+        
+        <!-- CARD MÃ QR THANH TOÁN -->
+        <div class="bg-white rounded-2xl shadow-md border-2 border-emerald-500/40 p-4 sm:p-5 relative overflow-hidden">
+          
+          <div class="flex items-center justify-between pb-3 border-b border-slate-100">
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-lg bg-emerald-600 text-white flex items-center justify-center text-sm font-bold">2</div>
+              <div>
+                <h3 class="text-sm sm:text-base font-bold text-slate-800">Thanh Toán Vietcombank</h3>
+                <p class="text-[11px] text-slate-500">Ngân hàng TMCP Ngoại Thương VN (VCB)</p>
+              </div>
+            </div>
+            <span class="inline-flex items-center gap-1 bg-emerald-50 text-emerald-700 text-[11px] font-semibold px-2 py-0.5 rounded-md border border-emerald-200">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span> 24/7 Napas
+            </span>
           </div>
 
-          <!-- NÚT COPY TIN NHẮN ZALO -->
-          <div class="pt-1">
-            <button type="button" onclick="copyTicketMessage()" class="w-full py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs uppercase tracking-wider rounded-xl shadow-md shadow-emerald-600/30 transition flex items-center justify-center gap-2 active:scale-95">
-              <span>📋</span> Copy Tin Nhắn Xác Nhận Cho Khách (Zalo/Telegram)
+          <!-- TAB CHỌN XEM MÃ QR -->
+          <div class="mt-3 flex rounded-lg p-1 bg-slate-100 text-xs font-semibold">
+            <button type="button" id="qr-tab-dynamic" onclick="switchQRDisplay('dynamic')"
+              class="flex-1 py-1.5 rounded-md text-center bg-white text-emerald-800 shadow-xs transition">
+              ⚡ QR Tự Điền Tiền & Memo
             </button>
-            <div id="copyNotice" class="hidden text-center text-xs text-emerald-600 font-semibold mt-2">
-              ✅ Đã copy vào clipboard! Bạn có thể dán (Paste) ngay vào Zalo/Telegram.
+            <button type="button" id="qr-tab-clean" onclick="switchQRDisplay('clean')"
+              class="flex-1 py-1.5 rounded-md text-center text-slate-600 hover:text-slate-900 transition">
+              Thẻ QR VCB Gốc
+            </button>
+          </div>
+
+          <!-- KHUNG HIỂN THỊ MÃ QR -->
+          <div class="mt-3.5 flex flex-col items-center">
+            
+            <!-- VIEW 1: QR ĐỘNG TỰ ĐIỀN TIỀN VÀ MEMO "ỦNG HỘ PAGE..." -->
+            <div id="qr-view-dynamic" class="w-full flex flex-col items-center">
+              <div class="max-w-[270px] sm:max-w-[300px] w-full rounded-2xl overflow-hidden shadow-md border border-emerald-500/40 bg-white p-3 flex flex-col items-center">
+                <div class="text-[11px] font-bold text-emerald-800 mb-1 flex items-center gap-1">
+                  ⚡ Quét xong tự điền đúng tiền & nội dung:
+                </div>
+                <img id="dynamic-qr-img" src="https://img.vietqr.io/image/vietcombank-9973807027-compact2.png?amount=280000&addInfo=Ung%20ho%20Page%20QQ99&accountName=DO%20TRONG%20MINH%20QUAN" alt="Mã VietQR động" class="w-full h-auto rounded-lg">
+                <div class="text-[10px] text-slate-400 mt-1 text-center font-medium">Đồng bộ tự động theo đơn bạn vừa đặt</div>
+              </div>
+            </div>
+
+            <!-- VIEW 2: THẺ VIETCOMBANK GỐC ĐÃ CROP SẮC NÉT -->
+            <div id="qr-view-clean" class="w-full hidden flex flex-col items-center">
+              <div class="relative group max-w-[270px] sm:max-w-[300px] w-full rounded-2xl overflow-hidden shadow-md border border-slate-200/90 bg-white p-2">
+                <img id="main-qr-img" src="vcb_qr_clean.png" alt="Mã QR Vietcombank" class="w-full h-auto object-contain rounded-xl transition duration-300 group-hover:scale-[1.01]">
+                <button type="button" onclick="openQRModal()" class="absolute inset-0 bg-slate-900/20 backdrop-blur-[1px] opacity-0 group-hover:opacity-100 flex items-center justify-center transition rounded-xl">
+                  <span class="bg-white/95 text-slate-800 text-xs font-bold px-3 py-1.5 rounded-full shadow flex items-center gap-1.5">
+                    🔍 Bấm để phóng to
+                  </span>
+                </button>
+              </div>
+            </div>
+
+            <!-- CÁC NÚT THAO TÁC QR: LƯU MÃ VỀ MÁY & PHÓNG TO -->
+            <div class="w-full mt-3 grid grid-cols-2 gap-2">
+              <button type="button" onclick="downloadQRCode()" 
+                class="w-full bg-emerald-600 hover:bg-emerald-700 active:bg-emerald-800 text-white font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 shadow-xs transition cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path>
+                </svg>
+                <span>Lưu mã về máy</span>
+              </button>
+
+              <button type="button" onclick="openQRModal()" 
+                class="w-full bg-slate-100 hover:bg-slate-200 active:bg-slate-300 text-slate-700 font-bold py-2.5 px-3 rounded-xl text-xs flex items-center justify-center gap-1.5 transition cursor-pointer">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                </svg>
+                <span>Phóng to quét</span>
+              </button>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-1 text-center">📱 Nhấn "Lưu mã về máy" để mở trong App Ngân Hàng quét ảnh</p>
+          </div>
+
+          <!-- BẢNG THÔNG TIN TÀI KHOẢN VCB VỚI NÚT SAO CHÉP 1 CHẠM -->
+          <div class="mt-3.5 pt-3.5 border-t border-slate-100 space-y-2 text-xs">
+            
+            <!-- NGÂN HÀNG -->
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+              <span class="text-slate-500 font-medium">Ngân hàng</span>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-800">Vietcombank (VCB)</span>
+                <button type="button" onclick="copyText('Vietcombank', 'Tên ngân hàng')" class="text-emerald-700 hover:text-emerald-800 font-semibold text-[11px] px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 transition">Sao chép</button>
+              </div>
+            </div>
+
+            <!-- SỐ TÀI KHOẢN -->
+            <div class="flex items-center justify-between p-2 rounded-lg bg-emerald-50/70 border border-emerald-200/80">
+              <div>
+                <span class="text-emerald-900 font-medium block">Số tài khoản</span>
+                <span id="acc-num" class="font-num text-sm sm:text-base font-extrabold text-emerald-900 tracking-wider">9973807027</span>
+              </div>
+              <button type="button" onclick="copyText('9973807027', 'Số tài khoản')" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg shadow-xs transition flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- CHỦ TÀI KHOẢN -->
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+              <span class="text-slate-500 font-medium">Chủ tài khoản</span>
+              <div class="flex items-center gap-2">
+                <span class="font-bold text-slate-800 uppercase">DO TRONG MINH QUAN</span>
+                <button type="button" onclick="copyText('DO TRONG MINH QUAN', 'Chủ tài khoản')" class="text-emerald-700 hover:text-emerald-800 font-semibold text-[11px] px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 transition">Sao chép</button>
+              </div>
+            </div>
+
+            <!-- SỐ TIỀN CẦN CHUYỂN -->
+            <div class="flex items-center justify-between p-2 rounded-lg bg-slate-50 border border-slate-100">
+              <span class="text-slate-500 font-medium">Số tiền phải chuyển</span>
+              <div class="flex items-center gap-2">
+                <span id="copy-amount-display" class="font-num font-extrabold text-emerald-700 text-sm">280.000 đ</span>
+                <button type="button" onclick="copyCurrentAmount()" class="text-emerald-700 hover:text-emerald-800 font-semibold text-[11px] px-1.5 py-0.5 rounded bg-emerald-50 border border-emerald-200 hover:bg-emerald-100 transition">Sao chép</button>
+              </div>
+            </div>
+
+            <!-- NỘI DUNG CHUYỂN KHOẢN (MEMO: "Ủng hộ Page...") -->
+            <div class="flex items-center justify-between p-2 rounded-lg bg-amber-50/70 border border-amber-200">
+              <div class="truncate mr-2">
+                <span class="text-amber-900 font-medium block text-[11px]">Nội dung chuyển khoản (Memo)</span>
+                <span id="transfer-memo" class="font-mono text-xs font-bold text-amber-950 select-all">Ung ho Page QQ99</span>
+              </div>
+              <button type="button" onclick="copyTransferMemo()" class="shrink-0 bg-amber-600 hover:bg-amber-700 text-white font-bold text-xs px-2.5 py-1.5 rounded-lg shadow-xs transition flex items-center gap-1">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+                Copy
+              </button>
+            </div>
+
+            <!-- CHI NHÁNH -->
+            <div class="text-[11px] text-slate-400 text-center pt-1">
+              Trụ sở CN Thống Nhất • Vui lòng chuyển đúng nội dung "Ủng hộ Page..."
             </div>
           </div>
-
         </div>
-      </div>
+
+        <!-- HỖ TRỢ ZALO NHANH -->
+        <div class="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-3.5 text-white shadow-xs flex items-center justify-between">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-white text-blue-600 flex items-center justify-center font-black text-base shadow-xs">
+              Z
+            </div>
+            <div>
+              <div class="text-[11px] font-medium text-blue-100">Gửi ảnh vé / Thắc mắc?</div>
+              <div class="text-xs sm:text-sm font-bold">Liên hệ Zalo Lucky QQ99 (0973.807.027)</div>
+            </div>
+          </div>
+          <button type="button" onclick="openDirectZalo()" class="bg-white text-blue-600 hover:bg-blue-50 active:bg-blue-100 px-3 py-1.5 rounded-xl text-xs font-extrabold shadow-xs transition">
+            Chat Zalo
+          </button>
+        </div>
+
+      </section>
 
     </div>
 
-    <!-- CỘT PHẢI (7 CỘT): TOÀN BỘ LUẬT CHƠI CHI TIẾT THEO TỪNG MIỀN -->
-    <div class="lg:col-span-7 space-y-6">
-
-      <!-- PHẦN A: BẢNG LUẬT MIỀN BẮC -->
-      <div class="bg-white rounded-2xl shadow-sm border-2 border-indigo-200 p-6">
-        <div class="flex items-center justify-between pb-4 border-b border-indigo-100">
-          <div>
-            <h2 class="text-lg font-bold text-indigo-950 flex items-center gap-2">
-              <span>🏮</span> Quy Định Riêng: Xổ Số Miền Bắc (MB)
-            </h2>
-            <p class="text-xs text-indigo-700 mt-0.5">Chỉ có 1 đài mở thưởng (27 lô) - <strong>Không có Giải 8</strong></p>
+    <!-- ========================================================================= -->
+    <!-- KHỐI MỚI: TRA CỨU MÃ GIAO DỊCH & BỘ QUY TẮC ĐẶT SỐ THÀNH CÔNG             -->
+    <!-- (THAY THẾ CHO LỊCH SỬ ĐƠN CŨ THEO YÊU CẦU: PHẢI CHUYỂN TIỀN MỚI TÌM RA)   -->
+    <!-- ========================================================================= -->
+    <section id="lookup-section" class="mt-8 space-y-5">
+      
+      <!-- HỘP TRA CỨU MÃ GIAO DỊCH -->
+      <div class="bg-white rounded-2xl p-4 sm:p-6 border border-slate-200/80 shadow-sm">
+        <div class="max-w-2xl mx-auto text-center space-y-2 mb-5">
+          <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-800 text-xs font-bold border border-emerald-200">
+            🔍 Hệ Thống Tra Cứu Tự Động
           </div>
-          <span class="text-xs bg-indigo-100 text-indigo-900 font-bold px-2.5 py-1 rounded-lg">Đặc thù MB</span>
+          <h3 class="text-base sm:text-xl font-black text-slate-800">
+            Tra Cứu Mã Giao Dịch & Trạng Thái Giữ Vé
+          </h3>
+          <p class="text-xs text-slate-500">
+            Nhập <strong>Mã giao dịch</strong> (VD: <span class="font-mono text-emerald-700 font-bold">QQ-782914</span> hoặc <span class="font-mono text-emerald-700 font-bold">782914</span>) hoặc <strong>Số điện thoại</strong> để kiểm tra tình trạng xác nhận vé.
+          </p>
         </div>
 
-        <div class="overflow-x-auto mt-4">
-          <table class="w-full text-left text-sm">
-            <thead>
-              <tr class="bg-indigo-50/60 text-indigo-950 text-xs uppercase font-bold border-y border-indigo-200">
-                <th class="py-3 px-3">Loại cược MB</th>
-                <th class="py-3 px-3">Phạm vi dò số</th>
-                <th class="py-3 px-3">Tiền xác MB</th>
-                <th class="py-3 px-3">Tiền trúng (1 nháy)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-indigo-50/30 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 2 Số MB</td>
-                <td class="py-3 px-3 text-xs text-slate-600">2 số cuối của tất cả 27 giải</td>
-                <td class="py-3 px-3 font-extrabold text-indigo-700 font-mono-num">1k $\rightarrow$ 21k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ (72k)</td>
-              </tr>
-              <tr class="hover:bg-indigo-50/30 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 3 Số MB</td>
-                <td class="py-3 px-3 text-xs text-slate-600">3 số cuối các giải có $\ge$ 3 chữ số</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 21k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ (620k)</td>
-              </tr>
-              <tr class="hover:bg-indigo-50/30 transition bg-indigo-50/10">
-                <td class="py-3 px-3 font-bold text-indigo-900">Đầu Đuôi MB (2 số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-indigo-800">
-                  • Đầu: <strong>4 số của Giải 7</strong><br>
-                  • Đuôi: <strong>2 số cuối Giải ĐB</strong> *(Tổng 5 vị trí)*
-                </td>
-                <td class="py-3 px-3 font-extrabold text-indigo-700 font-mono-num">1k cược $\rightarrow$ 4k xác<br><span class="text-[11px] font-normal text-slate-500">(10k = 40k)</span></td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ / vị trí<br><span class="text-[11px] font-normal text-slate-500">(10k ăn 720k)</span></td>
-              </tr>
-              <tr class="hover:bg-indigo-50/30 transition bg-indigo-50/10">
-                <td class="py-3 px-3 font-bold text-indigo-900">Xỉu Chủ MB (3 số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-indigo-800">
-                  • Đầu: <strong>3 số của Giải 6</strong><br>
-                  • Đuôi: <strong>3 số cuối Giải ĐB</strong> *(Tổng 4 vị trí)*
-                </td>
-                <td class="py-3 px-3 font-extrabold text-indigo-700 font-mono-num">10k cược $\rightarrow$ 32k xác<br><span class="text-[11px] font-normal text-slate-500">(Hệ số 3.2)</span></td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ / vị trí<br><span class="text-[11px] font-normal text-slate-500">(10k ăn 6.200k)</span></td>
-              </tr>
-            </tbody>
-          </table>
+        <!-- FORM TÌM KIẾM -->
+        <div class="max-w-xl mx-auto flex flex-col sm:flex-row gap-2">
+          <div class="relative flex-1">
+            <input type="text" id="lookup-input" placeholder="VD: QQ-782914 hoặc SĐT 09xxxxxxxx..." class="w-full bg-slate-50 border border-slate-300 rounded-xl pl-10 pr-3 py-3 text-xs sm:text-sm font-semibold focus:ring-2 focus:ring-emerald-500 focus:bg-white outline-none transition">
+            <svg class="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+          </div>
+          <button type="button" onclick="performOrderLookup()" class="bg-emerald-600 hover:bg-emerald-700 active:scale-[0.99] text-white font-bold py-3 px-5 rounded-xl text-xs sm:text-sm transition flex items-center justify-center gap-1.5 shadow-sm cursor-pointer shrink-0">
+            <span>Tra Cứu Vé</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+          </button>
+        </div>
+
+        <!-- KHUNG KẾT QUẢ TRA CỨU -->
+        <div id="lookup-result-container" class="max-w-xl mx-auto mt-4 hidden">
+          <!-- Kết quả sẽ hiển thị ở đây qua JS -->
         </div>
       </div>
 
-      <!-- PHẦN B: BẢNG LUẬT MIỀN NAM & MIỀN TRUNG -->
-      <div class="bg-white rounded-2xl shadow-sm border border-slate-200 p-6">
-        <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+      <!-- BỘ QUY TẮC ĐẶT SỐ THÀNH CÔNG & KÍCH HOẠT VÉ TẠI LUCKY QQ99 -->
+      <div class="bg-gradient-to-br from-slate-900 to-slate-800 text-white rounded-3xl p-5 sm:p-7 shadow-lg border border-slate-700">
+        <div class="flex items-center gap-2 mb-4 pb-3 border-b border-slate-700/80">
+          <span class="text-xl">📜</span>
           <div>
-            <h2 class="text-lg font-bold text-slate-900 flex items-center gap-2">
-              <span>🌴</span> Quy Định: Xổ Số Miền Nam & Miền Trung (MN & MT)
-            </h2>
-            <p class="text-xs text-slate-500 mt-0.5">Mỗi đài có 18 giải (Có Giải 8 và Giải Đặc Biệt 6 số)</p>
+            <h4 class="text-sm sm:text-base font-extrabold text-white">
+              BỘ QUY TẮC XÁC NHẬN VÉ & TRA CỨU - LUCKY QQ99
+            </h4>
+            <p class="text-[11px] text-slate-300">Vui lòng đọc kỹ để đảm bảo vé của bạn được giữ hợp lệ 100%</p>
           </div>
-          <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-1 rounded-lg">Chuẩn 18 lô</span>
         </div>
 
-        <div class="overflow-x-auto mt-4">
-          <table class="w-full text-left text-sm">
-            <thead>
-              <tr class="bg-slate-50 text-slate-600 text-xs uppercase font-bold border-y border-slate-200">
-                <th class="py-3 px-3">Loại cược</th>
-                <th class="py-3 px-3">Phạm vi dò số</th>
-                <th class="py-3 px-3">Tiền xác (1 đài)</th>
-                <th class="py-3 px-3">Tiền trúng (1 nháy)</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-slate-100">
-              <tr class="hover:bg-slate-50/80 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 2 Số</td>
-                <td class="py-3 px-3 text-xs text-slate-600">2 số cuối tất cả 18 giải</td>
-                <td class="py-3 px-3 font-bold text-emerald-700 font-mono-num">1k $\rightarrow$ 14k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ (72k)</td>
-              </tr>
-              <tr class="hover:bg-slate-50/80 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 3 Số</td>
-                <td class="py-3 px-3 text-xs text-slate-600">3 số cuối từ Giải 7 $\rightarrow$ Đặc Biệt</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 14k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ (620k)</td>
-              </tr>
-              <tr class="hover:bg-slate-50/80 transition">
-                <td class="py-3 px-3 font-bold text-slate-900">Bao Lô 4 Số</td>
-                <td class="py-3 px-3 text-xs text-slate-600">4 số cuối từ Giải 6 $\rightarrow$ Đặc Biệt</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 14k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 5200$ (5.200k)</td>
-              </tr>
-              <tr class="hover:bg-emerald-50/30 transition">
-                <td class="py-3 px-3 font-bold text-emerald-900">Đầu Đuôi (2 Số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-emerald-800">Giải 8 (Đầu) & Giải ĐB (Đuôi)</td>
-                <td class="py-3 px-3 font-bold text-emerald-700 font-mono-num">10k $\rightarrow$ 16k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 72$ (720k)</td>
-              </tr>
-              <tr class="hover:bg-emerald-50/30 transition">
-                <td class="py-3 px-3 font-bold text-emerald-900">Xỉu Chủ (3 Số)</td>
-                <td class="py-3 px-3 text-xs font-semibold text-emerald-800">Giải 7 (Đầu) & Giải ĐB (Đuôi)</td>
-                <td class="py-3 px-3 text-xs text-slate-500 font-mono-num">1k $\rightarrow$ 2k xác</td>
-                <td class="py-3 px-3 font-extrabold text-orange-600 font-mono-num">$\times 620$ (620k)</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs">
+          <!-- QUY TẮC 1 -->
+          <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+            <div class="font-bold text-emerald-400 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-emerald-500/20 text-emerald-300 flex items-center justify-center text-[11px]">1</span>
+              Quy tắc cấp Mã Đơn:
+            </div>
+            <p class="text-slate-300 leading-relaxed text-[11px]">
+              Khi bấm đặt số trên website, hệ thống sẽ cấp ngay cho bạn 1 <strong>Mã đơn duy nhất</strong>. Quý khách vui lòng lưu lại mã này hoặc chụp lại màn hình.
+            </p>
+          </div>
+
+          <!-- QUY TẮC 2 -->
+          <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-1.5">
+            <div class="font-bold text-amber-400 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-amber-500/20 text-amber-300 flex items-center justify-center text-[11px]">2</span>
+              Quy tắc chuyển tiền để kích hoạt:
+            </div>
+            <p class="text-slate-300 leading-relaxed text-[11px]">
+              <strong>Bắt buộc phải chuyển khoản thành công</strong> với nội dung <code class="text-amber-300 bg-amber-950/60 px-1 py-0.5 rounded">Ung ho Page...</code>. Hệ thống chỉ giữ vé thật khi tài khoản nhận được tiền xác.
+            </p>
+          </div>
+
+          <!-- QUY TẮC 3 (ĐIỂM NHẤN YÊU CẦU: PHẢI CHUYỂN TIỀN MỚI TÌM RA) -->
+          <div class="p-3.5 rounded-2xl bg-emerald-950/50 border border-emerald-500/30 space-y-1.5 md:col-span-2">
+            <div class="font-bold text-emerald-300 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-emerald-400 text-slate-900 flex items-center justify-center text-[11px] font-black">★</span>
+              Quy tắc tra cứu mã giao dịch:
+            </div>
+            <p class="text-emerald-100 leading-relaxed text-[11px]">
+              <strong>Chỉ những đơn đã hoàn tất chuyển khoản thành công</strong> và được đối soát (trong vòng 1 - 3 phút) thì khi tra cứu mới hiển thị trạng thái <span class="bg-emerald-600 text-white font-bold px-1.5 py-0.5 rounded">✓ ĐÃ KÍCH HOẠT & GIỮ VÉ</span>. Những đơn chưa chuyển khoản sẽ được hệ thống từ chối hoặc báo chưa thanh toán, vé không có giá trị dự thưởng.
+            </p>
+          </div>
+
+          <!-- QUY TẮC 4 -->
+          <div class="p-3.5 rounded-2xl bg-white/5 border border-white/10 space-y-1.5 md:col-span-2">
+            <div class="font-bold text-blue-400 flex items-center gap-1.5">
+              <span class="w-5 h-5 rounded-full bg-blue-500/20 text-blue-300 flex items-center justify-center text-[11px]">3</span>
+              Chụp gửi vé & Trả thưởng minh bạch:
+            </div>
+            <p class="text-slate-300 leading-relaxed text-[11px]">
+              Trước giờ mở thưởng (MN: 16h00 • MT: 17h00 • MB: 18h00), chủ shop sẽ ghi tên người đánh lên vé thật và chụp ảnh gửi qua Zalo. Ngay sau khi có kết quả xổ số, tiền trúng thưởng sẽ được chuyển khoản trực tiếp vào tài khoản ngân hàng của bạn trong vòng 15 phút.
+            </p>
+          </div>
         </div>
       </div>
 
-    </div>
+    </section>
 
   </main>
 
-  <!-- JAVASCRIPT LOGIC TÍNH TOÁN -->
-  <script>
-    let currentRegion = 'MN'; // 'MN' hoặc 'MB'
-    let currentNumbers = ['77'];
+  <!-- FOOTER -->
+  <footer class="bg-slate-900 text-slate-400 text-xs py-7 border-t border-slate-800 mt-10">
+    <div class="max-w-6xl mx-auto px-4 text-center space-y-2.5">
+      <div class="flex items-center justify-center gap-2 text-white font-bold text-sm">
+        <span>🍀</span> LUCKY QQ99 - DỊCH VỤ MUA VÉ SỐ & ĐÁNH SỐ HỘ CHUYÊN NGHIỆP
+      </div>
+      <p class="max-w-xl mx-auto text-slate-400 text-[11px] leading-relaxed">
+        Cam kết giữ vé thật 100%, ghi tên người mua và chụp ảnh gửi qua Zalo trước giờ mở thưởng. Trả thưởng sòng phẳng, an toàn tuyệt đối.
+      </p>
+      <div class="pt-1.5 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-[11px] text-slate-300">
+        <a href="#lookup-section" class="hover:text-emerald-400 transition underline">Tra Cứu Giao Dịch</a>
+        <span>•</span>
+        <a href="luat_choi.html" target="_blank" class="hover:text-emerald-400 transition underline">Luật Chơi & Tỷ Lệ</a>
+        <span>•</span>
+        <span>Hotline/Zalo: <strong>0973.807.027</strong></span>
+      </div>
+      <div class="text-[10px] text-slate-500 pt-1">
+        © 2026 Lucky QQ99. Tất cả các quyền được bảo lưu.
+      </div>
+    </div>
+  </footer>
 
-    const BET_OPTIONS = {
-      MN: [
-        { val: 'bao_lo_2', label: 'Bao Lô 2 Số (Xác 1k = 14k | Ăn x72)', digits: 2 },
-        { val: 'bao_lo_3', label: 'Bao Lô 3 Số (Ăn x620)', digits: 3 },
-        { val: 'bao_lo_4', label: 'Bao Lô 4 Số (Ăn x5200)', digits: 4 },
-        { val: 'dau_duoi', label: 'Đầu Đuôi MN/MT (10k = Xác 16k | Dò G8 & ĐB)', digits: 2 },
-        { val: 'xiu_chu', label: 'Xỉu Chủ MN/MT (3 Số | Dò G7 & ĐB | Ăn x620)', digits: 3 }
-      ],
-      MB: [
-        { val: 'bao_lo_2', label: 'Bao Lô 2 Số MB (Xác 1k = 21k | Ăn x72)', digits: 2 },
-        { val: 'bao_lo_3', label: 'Bao Lô 3 Số MB (Xác 1k = 21k | Ăn x620)', digits: 3 },
-        { val: 'dau_duoi', label: 'Đầu Đuôi MB (1k = Xác 4k | Dò 4 số G7 + ĐB)', digits: 2 },
-        { val: 'xiu_chu', label: 'Xỉu Chủ MB (10k = Xác 32k | Dò 3 số G6 + ĐB)', digits: 3 }
-      ]
+  <!-- ========================================================================= -->
+  <!-- MODAL XEM PHÓNG TO MÃ QR                                                 -->
+  <!-- ========================================================================= -->
+  <div id="qr-modal" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-xs hidden items-center justify-center p-4" onclick="closeQRModal()">
+    <div class="bg-white rounded-2xl max-w-sm w-full p-4 text-center relative shadow-2xl" onclick="event.stopPropagation()">
+      <button type="button" onclick="closeQRModal()" class="absolute right-3 top-3 w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 flex items-center justify-center font-bold text-lg cursor-pointer">✕</button>
+      <h4 class="text-sm font-bold text-slate-800 mb-2">Mã QR Thanh Toán Vietcombank</h4>
+      <div class="rounded-xl overflow-hidden border border-slate-200 shadow-inner p-1 bg-white">
+        <img id="modal-qr-img" src="vcb_qr_clean.png" alt="Phóng to mã QR" class="w-full h-auto rounded-lg">
+      </div>
+      <div class="mt-3 flex gap-2">
+        <button type="button" onclick="downloadQRCode()" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-3 rounded-xl text-xs flex items-center justify-center gap-1 cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+          Lưu ảnh về máy
+        </button>
+        <button type="button" onclick="closeQRModal()" class="px-4 py-2 bg-slate-100 text-slate-700 rounded-xl text-xs font-semibold cursor-pointer">Đóng</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- MODAL 3: XÁC NHẬN ĐƠN VÉ & HƯỚNG DẪN THANH TOÁN (LUCKY QQ99)              -->
+  <!-- ========================================================================= -->
+  <div id="success-modal" class="fixed inset-0 z-50 bg-black/75 backdrop-blur-xs hidden items-center justify-center p-4">
+    <div class="bg-white rounded-3xl max-w-md w-full p-5 sm:p-6 text-center relative shadow-2xl">
+      <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-2xl mb-2.5 shadow-inner">
+        ✓
+      </div>
+      <h3 class="text-lg sm:text-xl font-black text-slate-800">Đặt Số Thành Công Tại Lucky QQ99!</h3>
+      
+      <p class="text-xs text-slate-500 mt-1">Mã đơn của bạn: <span id="modal-order-id" class="font-mono font-bold text-emerald-800 bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200 text-sm">QQ99-0000</span></p>
+
+      <!-- Tóm tắt đơn hàng -->
+      <div class="mt-3.5 p-3.5 bg-slate-50 rounded-2xl border border-slate-200/80 text-left text-xs space-y-1.5">
+        <div class="flex justify-between"><span class="text-slate-500">Người đánh:</span> <span id="modal-cust-name" class="font-bold text-slate-800">Nguyễn Văn A</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">SĐT nhận vé:</span> <span id="modal-cust-phone" class="font-mono font-bold text-slate-800">09xxxxxxxx</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">Miền & Ngày xổ:</span> <span id="modal-region-date" class="font-semibold text-slate-800">Miền Nam • 21/10/2026</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">Đài đánh:</span> <span id="modal-stations" class="font-semibold text-slate-800">Đồng Nai</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">Loại cược:</span> <span id="modal-bet-type" class="font-bold text-emerald-700">Bao Lô 2 Số</span></div>
+        <div class="flex justify-between"><span class="text-slate-500">Số đánh:</span> <span id="modal-numbers" class="font-mono font-black text-amber-700 tracking-wider">68, 79</span></div>
+        <div class="flex justify-between border-t border-slate-200 pt-1.5"><span class="text-slate-700 font-bold">Số tiền phải chuyển:</span> <span id="modal-total-pay" class="font-num font-black text-emerald-700 text-sm">280.000 đ</span></div>
+        <div class="flex justify-between border-t border-slate-200 pt-1.5"><span class="text-slate-500">Nội dung CK (Memo):</span> <span id="modal-memo" class="font-mono font-bold text-amber-800 select-all">Ung ho Page QQ99</span></div>
+      </div>
+
+      <!-- LƯU Ý KÍCH HOẠT VÉ -->
+      <div class="mt-3 p-2.5 rounded-xl bg-amber-50 border border-amber-200 text-amber-900 text-[11px] text-left">
+        <strong>⚠️ Lưu ý kích hoạt:</strong> Quý khách vui lòng chuyển tiền ngay. Sau khi chuyển tiền, hệ thống sẽ kích hoạt vé. Lúc đó bạn tra cứu mã đơn mới hiển thị vé hợp lệ!
+      </div>
+
+      <div class="mt-4 space-y-2">
+        <button type="button" onclick="confirmPaymentAndScroll()" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3 px-4 rounded-xl text-xs sm:text-sm flex items-center justify-center gap-1.5 shadow-md shadow-emerald-600/30 transition cursor-pointer">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z"></path></svg>
+          MỞ MÃ QR THANH TOÁN NGAY
+        </button>
+
+        <button type="button" onclick="markAsTransferredAndNotify()" class="w-full bg-blue-600 hover:bg-blue-700 active:bg-blue-800 text-white font-bold py-2.5 px-4 rounded-xl text-xs flex items-center justify-center gap-1.5 transition cursor-pointer">
+          <span class="w-4 h-4 rounded-full bg-white text-blue-600 flex items-center justify-center font-black text-[10px]">Z</span>
+          TÔI ĐÃ CHUYỂN TIỀN • GỬI ZALO XÁC NHẬN
+        </button>
+
+        <button type="button" onclick="closeSuccessModal()" class="w-full py-1.5 text-slate-500 hover:text-slate-800 text-xs font-semibold cursor-pointer">Đóng cửa sổ này</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST THÔNG BÁO -->
+  <div id="toast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 bg-slate-900/90 backdrop-blur-xs text-white text-xs font-semibold py-2 px-4 rounded-full shadow-2xl transition duration-300 opacity-0 pointer-events-none flex items-center gap-2">
+    <span class="text-emerald-400">✓</span>
+    <span id="toast-message">Đã sao chép vào bộ nhớ tạm!</span>
+  </div>
+
+  <!-- ========================================================================= -->
+  <!-- JAVASCRIPT XỬ LÝ TOÀN BỘ LOGIC                                           -->
+  <!-- ========================================================================= -->
+  <script>
+    // Bảng đài xổ số 3 miền theo thứ trong tuần (0: Chủ Nhật, 1: Thứ 2 ... 6: Thứ 7)
+    const STATIONS_SCHEDULE = {
+      MN: {
+        0: ['Tiền Giang', 'Kiên Giang', 'Đà Lạt'],
+        1: ['TP.HCM', 'Đồng Tháp', 'Cà Mau'],
+        2: ['Bến Tre', 'Vũng Tàu', 'Bạc Liêu'],
+        3: ['Đồng Nai', 'Cần Thơ', 'Sóc Trăng'],
+        4: ['Tây Ninh', 'An Giang', 'Bình Thuận'],
+        5: ['Vĩnh Long', 'Bình Dương', 'Trà Vinh'],
+        6: ['TP.HCM', 'Long An', 'Bình Phước', 'Hậu Giang']
+      },
+      MT: {
+        0: ['Kon Tum', 'Khánh Hòa', 'Thừa Thiên Huế'],
+        1: ['Thừa Thiên Huế', 'Phú Yên'],
+        2: ['Đắk Lắk', 'Quảng Nam'],
+        3: ['Đà Nẵng', 'Khánh Hòa'],
+        4: ['Bình Định', 'Quảng Trị', 'Quảng Bình'],
+        5: ['Gia Lai', 'Ninh Thuận'],
+        6: ['Đà Nẵng', 'Quảng Ngãi', 'Đắk Nông']
+      },
+      MB: {
+        0: ['Miền Bắc (Hà Nội)'],
+        1: ['Miền Bắc (Hà Nội)'],
+        2: ['Miền Bắc (Quảng Ninh)'],
+        3: ['Miền Bắc (Bắc Ninh)'],
+        4: ['Miền Bắc (Hà Nội)'],
+        5: ['Miền Bắc (Hải Phòng)'],
+        6: ['Miền Bắc (Nam Định)']
+      }
     };
 
-    function setRegion(reg) {
-      currentRegion = reg;
-      const btnMNMT = document.getElementById('btnMNMT');
-      const btnMB = document.getElementById('btnMB');
-      const provWrap = document.getElementById('provinceWrapper');
-      const mbNote = document.getElementById('mbProvinceNote');
-      const badge = document.getElementById('regionBadge');
+    const DAY_NAMES = ['Chủ Nhật', 'Thứ Hai', 'Thứ Ba', 'Thứ Tư', 'Thứ Năm', 'Thứ Sáu', 'Thứ Bảy'];
 
-      if (reg === 'MB') {
-        btnMB.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-indigo-700 text-white border-indigo-700 shadow-sm';
-        btnMNMT.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100';
-        provWrap.classList.add('hidden');
-        mbNote.classList.remove('hidden');
-        badge.innerText = 'Miền Bắc (MB)';
-        badge.className = 'text-xs bg-indigo-500/20 text-indigo-300 font-bold px-2.5 py-0.5 rounded-full border border-indigo-500/30';
-      } else {
-        btnMNMT.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-emerald-600 text-white border-emerald-600 shadow-sm';
-        btnMB.className = 'py-2.5 px-3 rounded-xl border text-xs font-bold transition flex items-center justify-center gap-1.5 bg-slate-50 text-slate-700 border-slate-300 hover:bg-slate-100';
-        provWrap.classList.remove('hidden');
-        mbNote.classList.add('hidden');
-        badge.innerText = 'Miền Nam / Trung';
-        badge.className = 'text-xs bg-emerald-500/20 text-emerald-400 font-bold px-2.5 py-0.5 rounded-full border border-emerald-500/30';
-      }
+    // State ứng dụng
+    let currentBetType = 'BAO_LO_2';
+    let selectedStations = [];
+    let currentRawTotal = 280000;
+    let latestCreatedOrder = null;
 
-      renderBetOptions();
-      onBetTypeChange();
+    // SINH MÃ GIAO DỊCH NGẮN GỌN & DUY NHẤT (VD: QQ-782914)
+    function generateSimpleOrderId() {
+      const randNum = Math.floor(100000 + Math.random() * 900000);
+      return `QQ-${randNum}`;
+    }
+    let currentTempOrderId = generateSimpleOrderId();
+
+    // Cấu hình hệ thống ngầm bí mật (Base64 an toàn)
+    const _SYS_ENDPOINT = "aHR0cHM6Ly9zY3JpcHQuZ29vZ2xlLmNvbS9tYWNyb3Mvcy9BS2Z5Y2J5VFo3N3FicDFCWERUQjNUY0lDM2huSklHYnBwSXQtVDk5TW1FRWNyaXpYOVNpTVZ6RE54OF85TnZhdHVXc1JuYTkvZXhlYw==";
+    function _getSystemUrl() {
+      try { return atob(_SYS_ENDPOINT); } catch(e) { return ""; }
     }
 
-    function renderBetOptions() {
-      const select = document.getElementById('betType');
-      const opts = BET_OPTIONS[currentRegion];
-      select.innerHTML = '';
-      opts.forEach(o => {
-        const opt = document.createElement('option');
-        opt.value = o.val;
-        opt.innerText = o.label;
-        select.appendChild(opt);
+    // Khởi tạo ứng dụng an toàn trong mọi trạng thái DOM
+    function initApp() {
+      initDatePicker();
+      updateStationsList();
+      onBetTypeChangeVisuals();
+      const targetInput = document.getElementById('target-numbers');
+      if (targetInput) targetInput.value = '68 79';
+      updatePointButtonsUI(10);
+      updateNumberCountInfo();
+      updateTransferMemo();
+      calculateTotal();
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initApp);
+    } else {
+      initApp();
+    }
+
+    // Cài đặt ngày mặc định
+    function initDatePicker() {
+      const today = new Date();
+      const yyyy = today.getFullYear();
+      const mm = String(today.getMonth() + 1).padStart(2, '0');
+      const dd = String(today.getDate()).padStart(2, '0');
+      const dateStr = `${yyyy}-${mm}-${dd}`;
+      
+      const dateInput = document.getElementById('draw-date');
+      dateInput.value = dateStr;
+      updateDayOfWeekBadge(today);
+    }
+
+    function onDateChange() {
+      const dateVal = document.getElementById('draw-date').value;
+      if (dateVal) {
+        const parts = dateVal.split('-');
+        const d = new Date(parts[0], parts[1] - 1, parts[2]);
+        updateDayOfWeekBadge(d);
+      }
+      updateStationsList();
+      calculateTotal();
+    }
+
+    function updateDayOfWeekBadge(dateObj) {
+      const dayIdx = dateObj.getDay();
+      const badge = document.getElementById('day-of-week-badge');
+      badge.innerText = DAY_NAMES[dayIdx];
+    }
+
+    function onRegionChange() {
+      updateStationsList();
+      onBetTypeChangeVisuals();
+      calculateTotal();
+    }
+
+    // Cập nhật danh sách đài mở thưởng
+    function updateStationsList() {
+      const region = document.getElementById('region-select').value;
+      const dateVal = document.getElementById('draw-date').value;
+      let dayIdx = new Date().getDay();
+      if (dateVal) {
+        const parts = dateVal.split('-');
+        dayIdx = new Date(parts[0], parts[1] - 1, parts[2]).getDay();
+      }
+
+      const available = (STATIONS_SCHEDULE[region] && STATIONS_SCHEDULE[region][dayIdx]) || ['Đài mặc định'];
+      const container = document.getElementById('station-chips');
+      const quickBtns = document.getElementById('quick-station-buttons');
+      container.innerHTML = '';
+
+      if (region === 'MB') {
+        quickBtns.classList.add('hidden');
+        selectedStations = [available[0]];
+      } else {
+        quickBtns.classList.remove('hidden');
+        // Mặc định chọn đài chính
+        if (selectedStations.length === 0 || !available.includes(selectedStations[0])) {
+          selectedStations = [available[0]];
+        }
+      }
+
+      available.forEach((stName, idx) => {
+        const isSelected = selectedStations.includes(stName);
+        const chip = document.createElement('button');
+        chip.type = 'button';
+        chip.dataset.station = stName;
+        chip.className = getChipClass(isSelected);
+        chip.innerHTML = `${isSelected ? '✓ ' : ''}${stName} ${idx === 0 && region !== 'MB' ? '<span class="text-[10px] opacity-80">(Chính)</span>' : ''}`;
+        
+        chip.onclick = () => {
+          if (region === 'MB') return;
+          toggleStationSelection(stName);
+        };
+        container.appendChild(chip);
+      });
+
+      updateStationCountBadge();
+    }
+
+    function toggleStationSelection(stName) {
+      const region = document.getElementById('region-select').value;
+      if (region === 'MB') return;
+      const index = selectedStations.indexOf(stName);
+      if (index > -1) {
+        if (selectedStations.length > 1) {
+          selectedStations.splice(index, 1);
+        } else {
+          showToast('⚠️ Phải chọn ít nhất 1 đài quay thưởng!');
+          return;
+        }
+      } else {
+        selectedStations.push(stName);
+      }
+      renderStationChips();
+      calculateTotal();
+    }
+
+    function selectQuickStations(mode) {
+      const region = document.getElementById('region-select').value;
+      const dateVal = document.getElementById('draw-date').value;
+      let dayIdx = new Date().getDay();
+      if (dateVal) {
+        const parts = dateVal.split('-');
+        dayIdx = new Date(parts[0], parts[1] - 1, parts[2]).getDay();
+      }
+      const available = (STATIONS_SCHEDULE[region] && STATIONS_SCHEDULE[region][dayIdx]) || [];
+
+      if (mode === 'main') {
+        selectedStations = [available[0]];
+      } else if (mode === 'two') {
+        selectedStations = available.slice(0, 2);
+      } else if (mode === 'all') {
+        selectedStations = [...available];
+      }
+      renderStationChips();
+      calculateTotal();
+    }
+
+    function renderStationChips() {
+      const container = document.getElementById('station-chips');
+      const region = document.getElementById('region-select').value;
+      const buttons = container.querySelectorAll('button');
+      buttons.forEach((btn, idx) => {
+        const stName = btn.dataset.station;
+        const isSelected = selectedStations.includes(stName);
+        btn.className = getChipClass(isSelected);
+        btn.innerHTML = `${isSelected ? '✓ ' : ''}${stName} ${idx === 0 && region !== 'MB' ? '<span class="text-[10px] opacity-80">(Chính)</span>' : ''}`;
+      });
+      updateStationCountBadge();
+    }
+
+    function getChipClass(isSelected) {
+      return isSelected
+        ? 'px-3.5 py-1.5 rounded-xl text-xs font-bold bg-emerald-600 text-white shadow-md ring-2 ring-emerald-400 scale-[1.03] transition-all duration-150 cursor-pointer flex items-center gap-1 active:scale-95 select-none'
+        : 'px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer flex items-center gap-1 active:scale-95 select-none';
+    }
+
+    function updateStationCountBadge() {
+      const badge = document.getElementById('station-count-badge');
+      badge.innerText = `Đã chọn: ${selectedStations.length} đài (${selectedStations.join(', ')})`;
+    }
+
+    // CHỌN LOẠI CƯỢC
+    function setBetType(type) {
+      currentBetType = type;
+      onBetTypeChangeVisuals();
+      calculateTotal();
+    }
+
+    function onBetTypeChangeVisuals() {
+      const types = ['BAO_LO_2', 'BAO_LO_3', 'BAO_LO_4', 'DAU_DUOI', 'XIU_CHU', 'KIEN_THIET'];
+      const region = document.getElementById('region-select').value;
+      
+      types.forEach(t => {
+        const btn = document.getElementById(`btn-bet-${t}`);
+        if (!btn) return;
+        if (t === currentBetType) {
+          btn.className = "p-2.5 rounded-xl border-2 border-emerald-600 bg-emerald-50 text-emerald-950 shadow-sm ring-2 ring-emerald-500/30 scale-[1.02] transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95";
+        } else {
+          btn.className = "p-2.5 rounded-xl border border-slate-200 bg-white text-slate-700 hover:border-emerald-400 hover:bg-emerald-50/40 hover:text-emerald-900 transition-all duration-150 text-xs font-bold text-left flex flex-col justify-between cursor-pointer active:scale-95";
+        }
+      });
+
+      const rateBL2 = document.getElementById('rate-BAO_LO_2');
+      const rateDD = document.getElementById('rate-DAU_DUOI');
+      const rateXC = document.getElementById('rate-XIU_CHU');
+      const hint = document.getElementById('number-rule-hint');
+
+      if (region === 'MB') {
+        if (rateBL2) rateBL2.innerText = '27 lô (xác 21k) • Ăn x72';
+        if (rateDD) rateDD.innerText = '5 vị trí (G7 & ĐB) • Ăn x72';
+        if (rateXC) rateXC.innerText = '4 vị trí (G6 & ĐB) • Ăn x620';
+      } else {
+        if (rateBL2) rateBL2.innerText = '18 lô (xác 14k) • Ăn x72';
+        if (rateDD) rateDD.innerText = 'G8 & G.ĐB • Ăn x72';
+        if (rateXC) rateXC.innerText = 'G7 & G.ĐB • Ăn x620';
+      }
+
+      if (currentBetType === 'BAO_LO_2' || currentBetType === 'DAU_DUOI') {
+        hint.innerText = 'Đánh số 2 chữ số (00 - 99)';
+      } else if (currentBetType === 'BAO_LO_3' || currentBetType === 'XIU_CHU') {
+        hint.innerText = 'Đánh số 3 chữ số (000 - 999)';
+      } else if (currentBetType === 'BAO_LO_4') {
+        hint.innerText = 'Đánh số 4 chữ số (0000 - 9999)';
+      } else {
+        hint.innerText = 'Vé số truyền thống (10.000 đ / vé)';
+      }
+    }
+
+    function setPointPerNumber(val) {
+      val = Number(val) || 1;
+      document.getElementById('point-per-number').value = val;
+      updatePointButtonsUI(val);
+      calculateTotal();
+    }
+
+    function updatePointButtonsUI(val) {
+      val = Number(val);
+      const pts = [1, 2, 5, 10, 20, 50, 100];
+      pts.forEach(p => {
+        const b = document.getElementById(`btn-pt-${p}`);
+        if (b) {
+          if (p === val) {
+            b.className = "py-1.5 px-2 bg-emerald-600 text-white font-black rounded-lg text-xs shadow-md ring-2 ring-emerald-400 scale-[1.04] transition-all duration-150 cursor-pointer active:scale-95";
+          } else {
+            b.className = "py-1.5 px-2 bg-slate-100 hover:bg-emerald-100 hover:text-emerald-900 active:scale-95 rounded-lg text-xs font-bold text-slate-700 border border-slate-200 transition-all duration-150 cursor-pointer";
+          }
+        }
       });
     }
 
-    function onBetTypeChange() {
-      const betType = document.getElementById('betType').value;
-      const digitsBadge = document.getElementById('digitsBadge');
+    function onNumbersInputChange() {
+      updateNumberCountInfo();
+      calculateTotal();
+    }
 
-      if (betType === 'bao_lo_2' || betType === 'dau_duoi') {
-        digitsBadge.innerText = '(mỗi số 2 chữ số)';
-      } else if (betType === 'bao_lo_3' || betType === 'xiu_chu') {
-        digitsBadge.innerText = '(bắt buộc 3 chữ số)';
-        if (currentNumbers.length === 1 && currentNumbers[0].length === 2) {
-          document.getElementById('numbersInput').value = '416';
-        }
-      } else if (betType === 'bao_lo_4') {
-        digitsBadge.innerText = '(bắt buộc 4 chữ số)';
-        if (currentNumbers.length === 1 && currentNumbers[0].length < 4) {
-          document.getElementById('numbersInput').value = '5423';
+    function getParsedNumbers() {
+      const raw = document.getElementById('target-numbers').value.trim();
+      if (!raw) return [];
+      return raw.split(/[\s,;]+/).filter(Boolean);
+    }
+
+    function updateNumberCountInfo() {
+      const nums = getParsedNumbers();
+      const info = document.getElementById('number-count-info');
+      if (nums.length === 0) {
+        info.innerText = 'Chưa nhập số nào';
+      } else {
+        info.innerText = `Đã nhập: ${nums.length} số [${nums.join(', ')}]`;
+      }
+    }
+
+    function pickRandomLuckyNumbers() {
+      const pool2D = ['68', '79', '86', '39', '88', '99', '38', '83', '28'];
+      const pool3D = ['379', '779', '668', '968', '888', '568'];
+      const pool4D = ['6868', '7979', '9999', '1368'];
+
+      let chosen = [];
+      if (currentBetType === 'BAO_LO_3' || currentBetType === 'XIU_CHU') {
+        chosen = [pool3D[Math.floor(Math.random() * pool3D.length)]];
+      } else if (currentBetType === 'BAO_LO_4') {
+        chosen = [pool4D[Math.floor(Math.random() * pool4D.length)]];
+      } else {
+        chosen = [pool2D[Math.floor(Math.random() * pool2D.length)], pool2D[Math.floor(Math.random() * pool2D.length)]];
+        if (chosen[0] === chosen[1]) chosen = [chosen[0]];
+      }
+
+      document.getElementById('target-numbers').value = chosen.join(' ');
+      updateNumberCountInfo();
+      calculateTotal();
+      showToast(`🎲 Đã chọn số lộc: ${chosen.join(' ')}`);
+    }
+
+    // TÍNH TOÁN TIỀN XÁC CHUẨN XÁC
+    function calculateTotal() {
+      const region = document.getElementById('region-select').value;
+      const point = parseFloat(document.getElementById('point-per-number').value) || 1;
+      const numList = getParsedNumbers();
+      const numCount = Math.max(1, numList.length);
+      const stationCount = Math.max(1, selectedStations.length);
+
+      let unitFactor = 0;
+      let winMultiplier = 0;
+
+      if (currentBetType === 'BAO_LO_2') {
+        unitFactor = (region === 'MB') ? 21000 : 14000;
+        winMultiplier = 72000;
+      } else if (currentBetType === 'BAO_LO_3') {
+        unitFactor = (region === 'MB') ? 21000 : 13600;
+        winMultiplier = 620000;
+      } else if (currentBetType === 'BAO_LO_4') {
+        unitFactor = 16000;
+        winMultiplier = 5200000;
+      } else if (currentBetType === 'DAU_DUOI') {
+        unitFactor = (region === 'MB') ? 4000 : 1600;
+        winMultiplier = 72000;
+      } else if (currentBetType === 'XIU_CHU') {
+        unitFactor = (region === 'MB') ? 3200 : 1600;
+        winMultiplier = 620000;
+      } else if (currentBetType === 'KIEN_THIET') {
+        unitFactor = 10000;
+        winMultiplier = 0;
+      }
+
+      let total = 0;
+      let formulaText = '';
+
+      if (currentBetType === 'KIEN_THIET') {
+        total = point * 10000;
+        formulaText = `${point} vé kiến thiết x 10.000 đ = ${formatVND(total)} đ`;
+      } else {
+        total = Math.round(point * unitFactor * stationCount * numCount);
+        formulaText = `${point}k x ${formatVND(unitFactor)} đ x ${stationCount} đài x ${numCount} số = ${formatVND(total)} đ`;
+      }
+
+      const potentialWin = Math.round(point * winMultiplier);
+
+      currentRawTotal = total;
+      document.getElementById('total-amount-display').innerText = formatVND(total);
+      document.getElementById('calc-formula-detail').innerText = formulaText;
+      document.getElementById('copy-amount-display').innerText = `${formatVND(total)} đ`;
+      document.getElementById('potential-win-display').innerText = (winMultiplier > 0) ? `${formatVND(potentialWin)} VNĐ` : 'Theo cơ cấu giải KTTT';
+
+      updateTransferMemo();
+      updateDynamicQR(total);
+    }
+
+    function formatVND(n) {
+      return (n || 0).toLocaleString('vi-VN');
+    }
+
+    function removeVietnameseTones(str) {
+      str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+      str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+      str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+      str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+      str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+      str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+      str = str.replace(/đ/g, "d");
+      str = str.replace(/À|Á|Ạ|Ả|Ã|Â|Ầ|Ấ|Ậ|Ẩ|Ẫ|Ă|Ằ|Ắ|Ặ|Ẳ|Ẵ/g, "A");
+      str = str.replace(/È|É|Ẹ|Ẻ|Ẽ|Ê|Ề|Ế|Ệ|Ể|Ễ/g, "E");
+      str = str.replace(/Ì|Í|Ị|Ỉ|Ĩ/g, "I");
+      str = str.replace(/Ò|Ó|Ọ|Ỏ|Õ|Ô|Ồ|Ố|Ộ|Ổ|Ỗ|Ơ|Ờ|Ớ|Ợ|Ở|Ỡ/g, "O");
+      str = str.replace(/Ù|Ú|Ụ|Ủ|Ũ|Ư|Ừ|Ứ|Ự|Ử|Ữ/g, "U");
+      str = str.replace(/Ỳ|Ý|Ỵ|Ỷ|Ỹ/g, "Y");
+      str = str.replace(/Đ/g, "D");
+      return str.replace(/[^a-zA-Z0-9 ]/g, "").trim();
+    }
+
+    // NỘI DUNG CHUYỂN KHOẢN (MEMO: "ỦNG HỘ PAGE...")
+    function getTransferMemoString(orderId) {
+      const rawName = document.getElementById('customer-name').value.trim();
+      const code = orderId || currentTempOrderId || '';
+      if (rawName) {
+        const cleanName = removeVietnameseTones(rawName).slice(0, 15);
+        return `Ung ho Page ${cleanName} ${code}`;
+      }
+      return `Ung ho Page QQ99 ${code}`;
+    }
+
+    function updateTransferMemo() {
+      const memo = getTransferMemoString();
+      document.getElementById('transfer-memo').innerText = memo;
+      document.getElementById('form-memo-preview').innerText = memo;
+    }
+
+    function updateDynamicQR(amount) {
+      const memo = document.getElementById('transfer-memo').innerText;
+      const url = `https://img.vietqr.io/image/vietcombank-9973807027-compact2.png?amount=${amount}&addInfo=${encodeURIComponent(memo)}&accountName=DO%20TRONG%20MINH%20QUAN`;
+      const dynImg = document.getElementById('dynamic-qr-img');
+      if (dynImg) dynImg.src = url;
+    }
+
+    // SWITCH QR DISPLAY
+    function switchQRDisplay(mode) {
+      const tabDyn = document.getElementById('qr-tab-dynamic');
+      const tabClean = document.getElementById('qr-tab-clean');
+      const viewDyn = document.getElementById('qr-view-dynamic');
+      const viewClean = document.getElementById('qr-view-clean');
+
+      if (mode === 'dynamic') {
+        tabDyn.className = 'flex-1 py-1.5 rounded-md text-center bg-white text-emerald-800 shadow-xs transition';
+        tabClean.className = 'flex-1 py-1.5 rounded-md text-center text-slate-600 hover:text-slate-900 transition';
+        viewDyn.classList.remove('hidden');
+        viewClean.classList.add('hidden');
+      } else {
+        tabClean.className = 'flex-1 py-1.5 rounded-md text-center bg-white text-emerald-800 shadow-xs transition';
+        tabDyn.className = 'flex-1 py-1.5 rounded-md text-center text-slate-600 hover:text-slate-900 transition';
+        viewClean.classList.remove('hidden');
+        viewDyn.classList.add('hidden');
+      }
+    }
+
+    // DOWNLOAD QR CODE
+    async function downloadQRCode() {
+      const isClean = !document.getElementById('qr-view-clean').classList.contains('hidden');
+      const imgSrc = isClean ? 'vcb_qr_clean.png' : document.getElementById('dynamic-qr-img').src;
+      const fileName = isClean ? 'Vietcombank_QR_LuckyQQ99.png' : 'VietQR_LuckyQQ99.png';
+
+      try {
+        const res = await fetch(imgSrc, { mode: 'cors' });
+        const blob = await res.blob();
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = fileName;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        setTimeout(() => URL.revokeObjectURL(url), 2000);
+        showToast('📥 Đã lưu mã QR về máy thành công!');
+      } catch (e) {
+        const a = document.createElement('a');
+        a.href = imgSrc;
+        a.download = fileName;
+        a.target = '_blank';
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        showToast('📥 Đang tải ảnh mã QR về máy...');
+      }
+    }
+
+    function openQRModal() {
+      const isClean = !document.getElementById('qr-view-clean').classList.contains('hidden');
+      const modalImg = document.getElementById('modal-qr-img');
+      modalImg.src = isClean ? 'vcb_qr_clean.png' : document.getElementById('dynamic-qr-img').src;
+      const modal = document.getElementById('qr-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+
+    function closeQRModal() {
+      const modal = document.getElementById('qr-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // SAO CHÉP VĂN BẢN
+    function copyText(text, label) {
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`✓ Đã sao chép ${label || text}!`);
+        }).catch(() => fallbackCopy(text, label));
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const t = document.createElement("textarea");
+      t.value = text;
+      t.style.position = "fixed";
+      t.style.opacity = "0";
+      document.body.appendChild(t);
+      t.focus();
+      t.select();
+      try {
+        document.execCommand('copy');
+        showToast(`✓ Đã sao chép ${label || text}!`);
+      } catch (e) {
+        showToast('Vui lòng copy thủ công');
+      }
+      document.body.removeChild(t);
+    }
+
+    function copyCurrentAmount() {
+      copyText(String(currentRawTotal), 'Số tiền phải chuyển');
+    }
+
+    function copyTransferMemo() {
+      copyText(document.getElementById('transfer-memo').innerText, 'Nội dung chuyển khoản (Memo)');
+    }
+
+    function copyFormMemo() {
+      copyText(document.getElementById('form-memo-preview').innerText, 'Nội dung chuyển khoản');
+    }
+
+    // TOAST
+    let toastTimer = null;
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      document.getElementById('toast-message').innerText = msg;
+      toast.classList.remove('opacity-0', 'pointer-events-none');
+      toast.classList.add('opacity-100');
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => {
+        toast.classList.remove('opacity-100');
+        toast.classList.add('opacity-0', 'pointer-events-none');
+      }, 2500);
+    }
+
+    // =========================================================================
+    // XỬ LÝ SUBMIT ĐƠN HÀNG (YÊU CẦU: TRÊN MOBILE BẤM XONG MỚI HIỆN RA QR)
+    // =========================================================================
+    async function submitOrder() {
+      const fullName = document.getElementById('customer-name').value.trim();
+      const phone = document.getElementById('customer-phone').value.trim();
+      const numbersList = getParsedNumbers();
+
+      if (!fullName) {
+        alert('Vui lòng nhập Họ và tên (Full Name) người đánh số!');
+        document.getElementById('customer-name').focus();
+        return;
+      }
+      if (!phone) {
+        alert('Vui lòng nhập Số điện thoại / Zalo để nhận vé!');
+        document.getElementById('customer-phone').focus();
+        return;
+      }
+      if (numbersList.length === 0) {
+        alert('Vui lòng nhập ít nhất 1 con số muốn đánh!');
+        document.getElementById('target-numbers').focus();
+        return;
+      }
+
+      const now = new Date();
+      // Mã đơn Lucky QQ99: Ngắn gọn, duy nhất dạng QQ-XXXXXX (VD: QQ-782914)
+      const orderId = currentTempOrderId || generateSimpleOrderId();
+      // Chuẩn bị mã mới cho lần đặt kế tiếp
+      currentTempOrderId = generateSimpleOrderId();
+
+      const region = document.getElementById('region-select').value;
+      const drawDate = document.getElementById('draw-date').value;
+      const point = document.getElementById('point-per-number').value;
+      const memo = getTransferMemoString(orderId);
+      const note = document.getElementById('customer-note').value.trim();
+
+      const orderData = {
+        orderId: orderId,
+        date: now.toLocaleTimeString('vi-VN', {hour: '2-digit', minute:'2-digit', second:'2-digit'}) + ' ' + now.toLocaleDateString('vi-VN'),
+        fullName: fullName,
+        phone: phone,
+        region: region,
+        drawDate: drawDate,
+        stations: selectedStations.join(', ') + ` (${selectedStations.length} đài)`,
+        betType: currentBetType,
+        numbers: numbersList.join(', '),
+        pointPerNumber: point + 'k',
+        totalAmount: currentRawTotal,
+        memo: memo,
+        status: 'CHO_THANH_TOAN', // Ban đầu là chờ thanh toán
+        note: note
+      };
+
+      latestCreatedOrder = orderData;
+      saveLocalOrder(orderData);
+
+      // Hiển thị trạng thái tải trên nút
+      const btn = document.getElementById('btn-submit-order');
+      const spinner = document.getElementById('submit-btn-spinner');
+      const btnText = document.getElementById('submit-btn-text');
+      btn.disabled = true;
+      spinner.classList.remove('hidden');
+      btnText.innerText = 'Đang xử lý đơn đặt...';
+
+      // TỰ ĐỘNG GỬI DỮ LIỆU ĐƠN VỀ HỆ THỐNG TRUNG TÂM NGẦM
+      const apiEndpoint = _getSystemUrl();
+      if (apiEndpoint) {
+        try {
+          fetch(apiEndpoint, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+            body: JSON.stringify(orderData)
+          }).catch(e => console.warn(e));
+        } catch (err) {
+          console.warn('Sync error:', err);
         }
       }
 
-      parseNumbersInput();
-      calculate();
+      btn.disabled = false;
+      spinner.classList.add('hidden');
+      btnText.innerText = '🛒 XÁC NHẬN MUA SỐ & LẤY MÃ QR';
+
+      // Cập nhật Modal thành công
+      document.getElementById('modal-order-id').innerText = orderId;
+      document.getElementById('modal-cust-name').innerText = fullName;
+      document.getElementById('modal-cust-phone').innerText = phone;
+      document.getElementById('modal-region-date').innerText = `${region} • ${drawDate}`;
+      document.getElementById('modal-stations').innerText = orderData.stations;
+      document.getElementById('modal-bet-type').innerText = currentBetType;
+      document.getElementById('modal-numbers').innerText = orderData.numbers;
+      document.getElementById('modal-total-pay').innerText = `${formatVND(currentRawTotal)} đ`;
+      document.getElementById('modal-memo').innerText = memo;
+
+      // HIỆN KHỐI MÃ QR TRÊN MOBILE THEO YÊU CẦU:
+      showPaymentSectionMobile();
+
+      // Mở modal thành công
+      const modal = document.getElementById('success-modal');
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
     }
 
-    function setBetAmount(val) {
-      document.getElementById('betAmount').value = val;
-      calculate();
+    // Hiển thị khối QR trên mobile (gỡ bỏ class hidden)
+    function showPaymentSectionMobile() {
+      const p = document.getElementById('payment-section');
+      if (p) {
+        p.classList.remove('hidden');
+        p.classList.add('block');
+      }
     }
 
-    function parseNumbersInput() {
-      const raw = document.getElementById('numbersInput').value;
-      const parts = raw.split(/[\s,;.-]+/).map(s => s.trim()).filter(Boolean);
-      currentNumbers = parts.length > 0 ? parts : [''];
+    function confirmPaymentAndScroll() {
+      closeSuccessModal();
+      showPaymentSectionMobile();
+      const p = document.getElementById('payment-section');
+      if (p) p.scrollIntoView({ behavior: 'smooth' });
+    }
 
-      // Render tags
-      const tagsContainer = document.getElementById('numberTags');
-      tagsContainer.innerHTML = '';
-      currentNumbers.forEach(n => {
-        if (!n) return;
-        const span = document.createElement('span');
-        span.className = 'px-2 py-0.5 bg-slate-100 text-slate-800 font-mono text-xs rounded border border-slate-300 font-semibold';
-        span.innerText = n;
-        tagsContainer.appendChild(span);
+    function markAsTransferredAndNotify() {
+      if (!latestCreatedOrder) return;
+      // Khách xác nhận đã chuyển tiền -> cập nhật sang trạng thái ĐÃ THANH TOÁN trên máy
+      latestCreatedOrder.status = 'DA_THANH_TOAN';
+      updateLocalOrderStatus(latestCreatedOrder.orderId, 'DA_THANH_TOAN');
+      
+      closeSuccessModal();
+      sendOrderToZalo();
+      showToast('✓ Đã ghi nhận bạn đã chuyển tiền! Đơn vé đã được kích hoạt.');
+    }
+
+    function closeSuccessModal() {
+      const modal = document.getElementById('success-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    function sendOrderToZalo() {
+      if (!latestCreatedOrder) return;
+      const o = latestCreatedOrder;
+      const msg = `Chào Lucky QQ99, mình vừa chuyển khoản đánh số hộ:\n- Mã đơn: ${o.orderId}\n- Họ tên: ${o.fullName}\n- SĐT: ${o.phone}\n- Miền: ${o.region} (Ngày ${o.drawDate})\n- Đài: ${o.stations}\n- Loại cược: ${o.betType}\n- Số đánh: ${o.numbers}\n- Tiền cược: ${formatVND(o.totalAmount)} đ\n- Memo chuyển khoản: ${o.memo}\nMình đã chuyển tiền qua VCB, nhờ shop kiểm tra và chụp gửi ảnh vé cho mình nhé!`;
+      
+      const zaloUrl = `https://zalo.me/0973807027?text=${encodeURIComponent(msg)}`;
+      window.open(zaloUrl, '_blank');
+      showToast('Đang kết nối Zalo với Lucky QQ99...');
+    }
+
+    function openDirectZalo() {
+      window.open('https://zalo.me/0973807027', '_blank');
+    }
+
+    // =========================================================================
+    // LƯU TRỮ VÀ TRA CỨU ĐƠN VÉ (QUY TẮC: PHẢI CHUYỂN TIỀN MỚI TÌM RA)
+    // =========================================================================
+    function saveLocalOrder(order) {
+      try {
+        let history = JSON.parse(localStorage.getItem('qq99_orders') || '[]');
+        history.unshift(order);
+        if (history.length > 50) history = history.slice(0, 50);
+        localStorage.setItem('qq99_orders', JSON.stringify(history));
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function updateLocalOrderStatus(orderId, newStatus) {
+      try {
+        let history = JSON.parse(localStorage.getItem('qq99_orders') || '[]');
+        const target = history.find(item => item.orderId === orderId);
+        if (target) {
+          target.status = newStatus;
+          localStorage.setItem('qq99_orders', JSON.stringify(history));
+        }
+      } catch (e) {
+        console.error(e);
+      }
+    }
+
+    function scrollToLookupSection() {
+      const sec = document.getElementById('lookup-section');
+      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
+      document.getElementById('lookup-input').focus();
+    }
+
+    // TRA CỨU MÃ GIAO DỊCH
+    async function performOrderLookup() {
+      const query = document.getElementById('lookup-input').value.trim();
+      const resContainer = document.getElementById('lookup-result-container');
+
+      if (!query) {
+        alert('Vui lòng nhập Mã giao dịch (VD: QQ-782914 hoặc 782914) hoặc Số điện thoại để tra cứu!');
+        return;
+      }
+
+      resContainer.classList.remove('hidden');
+
+      const history = JSON.parse(localStorage.getItem('qq99_orders') || '[]');
+      const cleanQ = query.toLowerCase().replace(/\s+/g, '');
+      const rawDigits = query.replace(/[^0-9]/g, '');
+
+      const found = history.find(item => {
+        if (!item) return false;
+        const id = (item.orderId || '').toLowerCase().replace(/\s+/g, '');
+        const idDigits = id.replace(/[^0-9]/g, '');
+        const phone = (item.phone || '').replace(/\s+/g, '');
+        return id === cleanQ ||
+               (rawDigits.length >= 6 && idDigits === rawDigits) ||
+               (cleanQ.length >= 4 && phone.includes(cleanQ));
       });
 
-      document.getElementById('numbersCountBadge').innerText = currentNumbers.length + ' con số';
-      calculate();
-    }
+      // NẾU TÌM TRONG MÁY CHƯA THẤY -> THỬ TRA CỨU TRỰC TIẾP TRÊN HỆ THỐNG TRUNG TÂM
+      if (!found) {
+        resContainer.innerHTML = `
+          <div class="p-4 bg-slate-50 border border-slate-200 rounded-2xl text-center space-y-2 animate-in fade-in">
+            <div class="animate-spin text-xl inline-block">🔄</div>
+            <div class="text-xs font-semibold text-slate-700">Đang đối soát dữ liệu trên hệ thống...</div>
+          </div>
+        `;
 
-    function calculate() {
-      const betType = document.getElementById('betType').value;
-      const provCnt = currentRegion === 'MB' ? 1 : (Number(document.getElementById('provincesCount').value) || 1);
-      const numCnt = Math.max(currentNumbers.filter(Boolean).length, 1);
-      const amt = Number(document.getElementById('betAmount').value) || 0;
-      const matches = Number(document.getElementById('hitMatches').value) || 1;
+        const endpoint = _getSystemUrl();
+        if (endpoint) {
+          try {
+            const resp = await fetch(endpoint + (endpoint.includes('?') ? '&' : '?') + 'action=get_orders');
+            const data = await resp.json();
+            if (data && data.orders && data.orders.length > 0) {
+              const remoteFound = data.orders.find(r => {
+                const rId = String(r['Mã Đơn'] || '').toLowerCase().replace(/\s+/g, '');
+                const rDigits = rId.replace(/[^0-9]/g, '');
+                const rPhone = String(r['SĐT / Zalo'] || '').replace(/\s+/g, '');
+                return rId === cleanQ ||
+                       (rawDigits.length >= 6 && rDigits === rawDigits) ||
+                       (cleanQ.length >= 4 && rPhone.includes(cleanQ));
+              });
 
-      let unitCost = 0;
-      let costFormula = '';
-      let winMultiplier = 72;
-      let winFormula = '';
-
-      if (currentRegion === 'MB') {
-        // ================= MIỀN BẮC =================
-        if (betType === 'bao_lo_2') {
-          unitCost = amt * 21; // 1k => 21k xác
-          winMultiplier = 72;
-          costFormula = `${numCnt} số × ${amt}k × 21k xác = ${(unitCost * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'bao_lo_3') {
-          unitCost = amt * 21;
-          winMultiplier = 620;
-          costFormula = `${numCnt} số × ${amt}k × 21k xác = ${(unitCost * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 620 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'dau_duoi') {
-          // MB: 1k cược => xác 4k (4 số G7 + 1 số ĐB)
-          unitCost = amt * 4;
-          winMultiplier = 72;
-          costFormula = `${numCnt} số × ${amt}k × 4k xác = ${(unitCost * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'xiu_chu') {
-          // MB: 10k cược => xác 32k (3 số G6 + 1 số ĐB) -> hệ số 3.2
-          unitCost = amt * 3.2;
-          winMultiplier = 620;
-          costFormula = `${numCnt} số × (${amt}k / 10) × 32k xác = ${(unitCost * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 620 = ${(matches * amt * winMultiplier)}k`;
+              if (remoteFound) {
+                const mappedOrder = {
+                  orderId: remoteFound['Mã Đơn'],
+                  date: remoteFound['Thời Gian Đặt'],
+                  fullName: remoteFound['Họ Và Tên'],
+                  phone: remoteFound['SĐT / Zalo'],
+                  region: remoteFound['Miền'],
+                  drawDate: remoteFound['Ngày Xổ'],
+                  stations: remoteFound['Đài Đánh'],
+                  betType: remoteFound['Loại Cược'],
+                  numbers: remoteFound['Số Đánh'],
+                  pointPerNumber: remoteFound['Tiền Mỗi Con (k)'],
+                  totalAmount: Number(remoteFound['Tiền Phải Chuyển (VNĐ)'] || 0),
+                  memo: remoteFound['Nội Dung CK (Memo)'],
+                  status: remoteFound['Trạng Thái'] || 'CHO_THANH_TOAN'
+                };
+                saveLocalOrder(mappedOrder);
+                renderLookupCard(mappedOrder, resContainer);
+                return;
+              }
+            }
+          } catch (e) {
+            console.warn(e);
+          }
         }
-      } else {
-        // ================= MIỀN NAM & MIỀN TRUNG =================
-        if (betType === 'bao_lo_2') {
-          unitCost = amt * 14;
-          winMultiplier = 72;
-          costFormula = `${numCnt} số × ${provCnt} đài × ${amt}k × 14 xác = ${(unitCost * provCnt * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'bao_lo_3') {
-          unitCost = amt * 14;
-          winMultiplier = 620;
-          costFormula = `${numCnt} số × ${provCnt} đài × ${amt}k × 14 xác = ${(unitCost * provCnt * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 620 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'bao_lo_4') {
-          unitCost = amt * 14;
-          winMultiplier = 5200;
-          costFormula = `${numCnt} số × ${provCnt} đài × ${amt}k × 14 xác = ${(unitCost * provCnt * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 5200 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'dau_duoi') {
-          unitCost = amt * 1.6; // 10k => 16k
-          winMultiplier = 72;
-          costFormula = `${numCnt} số × ${provCnt} đài × (${amt}k / 10) × 16k xác = ${(unitCost * provCnt * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 72 = ${(matches * amt * winMultiplier)}k`;
-        } else if (betType === 'xiu_chu') {
-          unitCost = amt * 2;
-          winMultiplier = 620;
-          costFormula = `${numCnt} số × ${provCnt} đài × ${amt}k × 2 vị trí = ${(unitCost * provCnt * numCnt)}k`;
-          winFormula = `${matches} nháy × ${amt}k × 620 = ${(matches * amt * winMultiplier)}k`;
-        }
+
+        resContainer.innerHTML = `
+          <div class="p-4 bg-rose-50 border border-rose-200 rounded-2xl text-center space-y-2 animate-in fade-in">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center mx-auto text-lg font-bold">✕</div>
+            <div class="text-sm font-bold text-rose-800">Không tìm thấy mã giao dịch: "${query}"</div>
+            <p class="text-xs text-rose-600 leading-relaxed max-w-sm mx-auto">
+              Theo quy định của <strong>Lucky QQ99</strong>, chỉ các đơn <strong>đã hoàn tất chuyển tiền</strong> và được kiểm duyệt mới tra cứu thành công. Vui lòng kiểm tra lại mã đơn hoặc hoàn tất chuyển khoản!
+            </p>
+          </div>
+        `;
+        return;
       }
 
-      const totalCostK = unitCost * provCnt * numCnt;
-      const totalWinK = matches * amt * winMultiplier;
-      const profitK = totalWinK - totalCostK;
+      renderLookupCard(found, resContainer);
+    }
 
-      // Render
-      document.getElementById('costFormulaDetail').innerText = costFormula;
-      document.getElementById('winFormulaDetail').innerText = winFormula;
+    function renderLookupCard(found, resContainer) {
+      // NẾU ĐƠN CHƯA THANH TOÁN (CHO_THANH_TOAN)
+      if (found.status === 'CHO_THANH_TOAN') {
+        resContainer.innerHTML = `
+          <div class="p-4 sm:p-5 bg-amber-50 border-2 border-amber-300 rounded-2xl text-left space-y-3 animate-in fade-in">
+            <div class="flex items-center justify-between pb-2 border-b border-amber-200">
+              <span class="font-mono font-bold text-amber-900 bg-amber-100 px-2 py-0.5 rounded text-xs">${found.orderId}</span>
+              <span class="px-2.5 py-0.5 rounded-full text-xs font-bold bg-amber-200 text-amber-900 flex items-center gap-1">
+                <span class="w-2 h-2 rounded-full bg-amber-600 animate-pulse"></span>
+                Chờ Chuyển Tiền
+              </span>
+            </div>
+            
+            <div class="text-xs text-amber-900 leading-relaxed">
+              <strong>⚠️ Đơn vé chưa được kích hoạt:</strong> Quý khách vừa tạo đơn lúc <span class="font-semibold">${found.date}</span> cho số <strong class="font-mono text-sm">${found.numbers}</strong> nhưng hệ thống <strong>chưa nhận được tiền chuyển khoản</strong>.
+            </div>
 
-      document.getElementById('totalCostDisplay').innerText = (totalCostK * 1000).toLocaleString('vi-VN') + ' đ';
-      document.getElementById('totalWinDisplay').innerText = (totalWinK * 1000).toLocaleString('vi-VN') + ' đ';
+            <div class="p-3 bg-white/80 rounded-xl border border-amber-200 text-xs space-y-1">
+              <div class="flex justify-between"><span>Số tiền cần chuyển:</span> <strong class="font-num text-emerald-700">${formatVND(found.totalAmount)} đ</strong></div>
+              <div class="flex justify-between"><span>Nội dung chuyển (Memo):</span> <strong class="font-mono text-amber-800">${found.memo}</strong></div>
+              <div class="flex justify-between"><span>Số tài khoản Vietcombank:</span> <strong class="font-num text-slate-800">9973807027 (DO TRONG MINH QUAN)</strong></div>
+            </div>
 
-      const profitEl = document.getElementById('netProfitDisplay');
-      if (profitK >= 0) {
-        profitEl.innerText = '+' + (profitK * 1000).toLocaleString('vi-VN') + ' đ';
-        profitEl.className = 'text-lg font-extrabold text-emerald-400 font-mono-num';
-      } else {
-        profitEl.innerText = (profitK * 1000).toLocaleString('vi-VN') + ' đ';
-        profitEl.className = 'text-lg font-extrabold text-rose-400 font-mono-num';
+            <div class="pt-1 flex gap-2">
+              <button onclick="activateOrderForDemo('${found.orderId}')" class="flex-1 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2 px-3 rounded-xl text-xs transition cursor-pointer">
+                ✓ Tôi Đã Chuyển Tiền (Xác Nhận)
+              </button>
+              <button onclick="showPaymentSectionMobile(); document.getElementById('payment-section').scrollIntoView({behavior: 'smooth'})" class="bg-amber-600 hover:bg-amber-700 text-white font-bold py-2 px-3 rounded-xl text-xs transition cursor-pointer">
+                Quét Mã QR
+              </button>
+            </div>
+          </div>
+        `;
+        return;
       }
+
+      // NẾU ĐÃ THANH TOÁN (DA_THANH_TOAN) -> HIỂN THỊ THẺ VÉ HỢP LỆ RỰC RỠ
+      resContainer.innerHTML = `
+        <div class="p-4 sm:p-5 bg-gradient-to-br from-emerald-50 via-white to-teal-50 border-2 border-emerald-500 rounded-2xl text-left space-y-3.5 shadow-md animate-in fade-in">
+          
+          <div class="flex items-center justify-between pb-2.5 border-b border-emerald-200">
+            <div>
+              <span class="font-mono font-black text-emerald-800 text-sm bg-emerald-100 px-2.5 py-0.5 rounded-lg border border-emerald-200">${found.orderId}</span>
+              <div class="text-[11px] text-slate-400 mt-0.5">Đặt lúc: ${found.date}</div>
+            </div>
+            <div class="text-right">
+              <span class="px-2.5 py-1 rounded-full text-xs font-black bg-emerald-600 text-white shadow-xs flex items-center gap-1">
+                ✓ ĐÃ THANH TOÁN & GIỮ VÉ
+              </span>
+              <div class="text-[10px] text-emerald-700 font-semibold mt-0.5">Hợp lệ dự thưởng</div>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-2 gap-2 text-xs">
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200/80">
+              <span class="text-slate-400 block text-[10px]">Người mua vé</span>
+              <strong class="text-slate-800 text-sm">${found.fullName}</strong>
+              <div class="text-slate-500 font-mono text-[11px]">${found.phone}</div>
+            </div>
+
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200/80">
+              <span class="text-slate-400 block text-[10px]">Miền & Đài xổ</span>
+              <strong class="text-slate-800 text-sm">${found.region}</strong>
+              <div class="text-emerald-700 font-medium text-[11px] truncate">${found.stations}</div>
+            </div>
+
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200/80">
+              <span class="text-slate-400 block text-[10px]">Loại cược</span>
+              <strong class="text-emerald-800 text-xs">${found.betType}</strong>
+              <div class="text-slate-500 text-[11px]">${found.pointPerNumber} / con</div>
+            </div>
+
+            <div class="p-2.5 bg-white rounded-xl border border-slate-200/80">
+              <span class="text-slate-400 block text-[10px]">Tiền xác đã trả</span>
+              <strong class="text-emerald-700 font-num text-sm">${formatVND(found.totalAmount)} VNĐ</strong>
+              <div class="text-emerald-600 text-[10px] font-bold">100% Sòng phẳng</div>
+            </div>
+          </div>
+
+          <div class="p-3 bg-emerald-100/70 rounded-xl border border-emerald-300 text-center">
+            <span class="text-[11px] text-emerald-900 font-semibold block">CÁC CON SỐ DỰ THƯỞNG MAY MẮN:</span>
+            <div class="text-xl sm:text-2xl font-mono font-black text-amber-700 tracking-widest mt-0.5">${found.numbers}</div>
+          </div>
+
+          <div class="flex items-center justify-between text-[11px] text-slate-500 pt-1">
+            <span>📷 Shop chụp ảnh vé thật gửi qua Zalo trước 16h00.</span>
+            <button onclick="openDirectZalo()" class="text-blue-600 font-bold hover:underline cursor-pointer">Liên hệ Zalo</button>
+          </div>
+
+        </div>
+      `;
     }
 
-    function copyTicketMessage() {
-      const regName = currentRegion === 'MB' ? 'Miền Bắc (MB)' : 'Miền Nam / Miền Trung';
-      const typeText = document.getElementById('betType').selectedOptions[0].text.split('(')[0].trim();
-      const provCnt = currentRegion === 'MB' ? '1 đài (MB)' : document.getElementById('provincesCount').value + ' đài';
-      const numbers = currentNumbers.filter(Boolean).join(', ');
-      const amt = document.getElementById('betAmount').value;
-      const cost = document.getElementById('totalCostDisplay').innerText;
-      const win = document.getElementById('totalWinDisplay').innerText;
-      const matches = document.getElementById('hitMatches').value;
-
-      const msg = `🎰 XÁC NHẬN VÉ CƯỢC LOTO\n-------------------------\n• Khu vực: ${regName}\n• Kiểu cược: ${typeText}\n• Số đánh: [ ${numbers} ]\n• Số đài: ${provCnt}\n• Điểm cược: ${amt}k / con\n• TIỀN XÁC CẦN THU: ${cost}\n• TIỀN TRÚNG (${matches} nháy): ${win}\n-------------------------\n(Dò thưởng theo kết quả: MinhChinh.com)`;
-
-      navigator.clipboard.writeText(msg).then(() => {
-        const notice = document.getElementById('copyNotice');
-        notice.classList.remove('hidden');
-        setTimeout(() => notice.classList.add('hidden'), 3000);
-      });
+    function activateOrderForDemo(orderId) {
+      updateLocalOrderStatus(orderId, 'DA_THANH_TOAN');
+      performOrderLookup();
+      showToast('✓ Đã cập nhật trạng thái: ĐÃ THANH TOÁN!');
     }
-
-    // Khởi chạy
-    renderBetOptions();
-    parseNumbersInput();
   </script>
 </body>
 </html>

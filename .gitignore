@@ -1,0 +1,29 @@
+# Hệ điều hành & IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Dữ liệu khách hàng nhạy cảm (Lưu cục bộ, không đẩy lên Git công khai)
+nguoi_choi.json
+lich_su_danh.csv
+ket_qua_xo_so.json
+
+# Tệp nhật ký & môi trường bí mật
+*.log
+.env*
+*.local
+
+# Bản sao lưu & tệp tạm
+*.bak
+*.tmp
+*_backup.*
+index_luat_choi_backup.html
+
+# Ảnh chụp màn hình test & tệp nháp xử lý ảnh
+preview_*.png
+VCB.png
+vcb_qr_card.png
+vcb_qr_inner.png
